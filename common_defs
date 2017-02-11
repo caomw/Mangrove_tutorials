@@ -1,0 +1,62 @@
+####################################################################################
+# Now, we define variables for the MANGROVE TDS Library (depending on your platform)
+#
+# 	MANGROVE_TDS_ROOT: root directory for the Mangrove TDS Library
+# 	MANGROVE_TDS_INCLUDE: include directory for the Mangrove TDS Library
+# 	MANGROVE_TDS_LIB: lib directory for the Mangrove TDS Library
+# 	MANGROVE_TDS_OPTIONS: options for linking the Mangrove TDS Library
+#
+# In particular, the following variables MUST NOT be modified, unless you are expert.
+# You should modify only the content of the MANGROVE_TDS_ROOT variable.
+####################################################################################
+win32 { MANGROVE_TDS_ROOT= ../../ }
+else:macx { MANGROVE_TDS_ROOT=../../ }
+else { MANGROVE_TDS_ROOT=../../ }
+MANGROVE_TDS_INCLUDE=$${MANGROVE_TDS_ROOT}include/
+MANGROVE_TDS_LIB=$${MANGROVE_TDS_ROOT}bin/
+MANGROVE_TDS_OPTIONS=-L$${MANGROVE_TDS_LIB} -lMangroveTDS -lm
+
+################################################################################################
+# Now, we define variables for the GOOGLE SPARSE HASH Library (depending on your platform)
+#
+#	MANGROVE_GOOGLE_SPARSEHASH_INCLUDE: include directory for the Google SparseHash Library
+#	MANGROVE_GOOGLE_SPARSEHASH_LIB: lib directory for the Google SparseHash Library
+#	MANGROVE_GOOGLE_SPARSEHASH_OPTIONS: options for linking the Google SparseHash Library
+#
+# In particular, the following variables MUST NOT be modified, unless you are expert.
+################################################################################################
+win32 { MANGROVE_GOOGLE_SPARSEHASH_INCLUDE=d:\usr\local\include\sparsehash\ }
+else:macx { MANGROVE_GOOGLE_SPARSEHASH_INCLUDE=/usr/local/include/sparsehash/ }
+else { MANGROVE_GOOGLE_SPARSEHASH_INCLUDE=/usr/local/include/sparsehash/ }
+win32 { MANGROVE_GOOGLE_SPARSEHASH_LIB= }
+else:macx { MANGROVE_GOOGLE_SPARSEHASH_LIB= }
+else { MANGROVE_GOOGLE_SPARSEHASH_LIB= }
+MANGROVE_GOOGLE_SPARSEHASH_OPTIONS= -lm
+
+#################################################################################################
+# Now, we define variables for the Boost Library (depending on your platform)
+#
+#	MANGROVE_BOOST_INCLUDE: include directory for the Bost Library
+#	MANGROVE_BOOST_LIB: lib directory for the Boost Library
+#	MANGROVE_BOOST_OPTIONS: options for linking the Boost Library
+#
+# In particular, the following variables MUST NOT be modified, unless you are expert.
+#################################################################################################
+win32 { MANGROVE_BOOST_INCLUDE=d:\usr\local\include\ }
+else:macx { MANGROVE_BOOST_INCLUDE=/usr/local/include/ }
+else { MANGROVE_BOOST_INCLUDE=/usr/local/include/ }
+win32 { MANGROVE_BOOST_LIB=d:\usr\local\lib\ }
+else:macx { MANGROVE_BOOST_LIB=/usr/local/lib/ }
+else { MANGROVE_BOOST_LIB=/usr/local/lib/ }
+MANGROVE_BOOST_OPTIONS= -lm
+
+##############################################################################################################
+# Now, we define cumulative variables for all libraries
+#
+#	MANGROVE_ALL_INCLUDE: all include directories
+#	MANGROVE_ALL_OPTIONS: all options for linking libraries
+#
+# In particular, the following variables MUST NOT be modified, unless you are expert.
+##############################################################################################################
+MANGROVE_ALL_INCLUDE=$${MANGROVE_TDS_INCLUDE} $${MANGROVE_GOOGLE_SPARSEHASH_INCLUDE} $${MANGROVE_BOOST_INCLUDE}
+MANGROVE_ALL_OPTIONS=$${MANGROVE_TDS_OPTIONS} $${MANGROVE_GOOGLE_SPARSEHASH_OPTIONS} $${MANGROVE_BOOST_OPTIONS}
