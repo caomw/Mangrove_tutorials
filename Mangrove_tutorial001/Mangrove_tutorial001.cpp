@@ -1,5 +1,5 @@
 /*************************************************************************************************************************************************************************
- * This source code provides the 'Tutorial Example 01' for the Mangrove Topological Data Structure Library (Mangrove TDS Library 3.0)
+ * This source code provides the 'Tutorial Example-001' for the Mangrove Topological Data Structure Library (Mangrove TDS Library 3.0)
  *                                                                           				    
  * David Canino (canino.david@gmail.com)
  *
@@ -16,7 +16,7 @@
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License (http://www.gnu.org/licenses/gpl.txt) for
  * more details.
  *
- * Mangrove_tutorial01.cpp - the 'Tutorial Example 01' for the 'Mangrove TDS Library 3.0'.
+ * Mangrove_tutorial001.cpp - the 'Tutorial Example-001' for the 'Mangrove TDS Library 3.0'.
  *************************************************************************************************************************************************************************/
  
 #include "Mangrove_platform.h"
@@ -26,13 +26,13 @@
 using namespace std;
 using namespace mangrove_tds;
 
-/// The <i>main function</i> for the <i>Mangrove_tutorial01</i> program.
+/// The <i>main function</i> for the <i>Mangrove_tutorial001</i> program.
 /**
- * \file Mangrove_tutorial01.cpp
+ * \file Mangrove_tutorial001.cpp
  * \author <A href="http://davidcanino.github.io">David Canino</A> (e-mail: <A href="mailto:canino.david@gmail.com">David Canino</A>)
  */
 
-/// The <i>main function</i> for the <i>Mangrove_tutorial01</i> program.
+/// The <i>main function</i> for the <i>Mangrove_tutorial001</i> program.
 /**
  * \return <ul><li>the built-in <i>EXIT_SUCCESS</i> constant value (provided by the <i><A href="http://en.wikipedia.org/wiki/C%2B%2B_Standard_Library">Standard C++ Library</A></i>), if all is ok</li><li>the built-in <i>EXIT_FAILURE</i> constant value (provided by 
  * the <i><A href="http://en.wikipedia.org/wiki/C%2B%2B_Standard_Library">Standard C++ Library</A></i>), otherwise</li></ul>
@@ -41,7 +41,7 @@ using namespace mangrove_tds;
 int main(void)
 {
 	/* Now, we validate several functions in the 'Mangrove_platform.h', plus the 'Mangrove_exportCopyrightDisclaimer()' and the 'Mangrove_fromQt2Cplustring()' functions in the 'Mangrove_Miscellanea.h' file. */
-	Mangrove_exportCopyrightDisclaimer ("Mangrove_tutorial01");
+	Mangrove_exportCopyrightDisclaimer ("Mangrove_tutorial001");
 	if(isQTDebugModeEnabled()) cout<<"\tThe QT library in use is currently including the 'debug' symbols"<<endl;
 	else cout<<"\tThe QT library in use is not currently including the 'debug' symbols"<<endl;
 	cout<<"\tThe conversion of a QT string produces the Standard C++ string: '"<<Mangrove_fromQt2Cplustring(QString("QT string"))<<"'"<<endl<<endl;
