@@ -1,5 +1,5 @@
 /*************************************************************************************************************************************************************************
- * This source code provides the 'Tutorial Example 02' for the Mangrove Topological Data Structure Library (Mangrove TDS Library 3.0)
+ * This source code provides the 'Tutorial Example-002' for the Mangrove Topological Data Structure Library (Mangrove TDS Library 3.0)
  *                                                                           				    
  * David Canino (canino.david@gmail.com)
  *
@@ -16,7 +16,7 @@
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License (http://www.gnu.org/licenses/gpl.txt) for
  * more details.
  *
- * Mangrove_tutorial02.cpp - the 'Tutorial Example 02' for the 'Mangrove TDS Library 3.0'.
+ * Mangrove_tutorial002.cpp - the 'Tutorial Example-002' for the 'Mangrove TDS Library 3.0'.
  *************************************************************************************************************************************************************************/
  
 #include "Mangrove_hashing.h"
@@ -28,9 +28,9 @@
 using namespace std;
 using namespace mangrove_tds;
 
-/// The <i>main function</i> for the <i>Mangrove_tutorial02</i> program.
+/// The <i>main function</i> for the <i>Mangrove_tutorial002</i> program.
 /**
- * \file Mangrove_tutorial02.cpp
+ * \file Mangrove_tutorial002.cpp
  * \author <A href="http://davidcanino.github.io">David Canino</A> (e-mail: <A href="mailto:canino.david@gmail.com">David Canino</A>)
  */
 
@@ -43,7 +43,7 @@ using namespace mangrove_tds;
  */
 #define ASSOCIATIONS_NUMBER 1000000
 
-/// The <i>main function</i> for the <i>Mangrove_tutorial02</i> program.
+/// The <i>main function</i> for the <i>Mangrove_tutorial002</i> program.
 /**
  * \return <ul><li>the built-in <i>EXIT_SUCCESS</i> constant value (provided by the <i><A href="http://en.wikipedia.org/wiki/C%2B%2B_Standard_Library">Standard C++ Library</A></i>), if all is ok</li><li>the built-in <i>EXIT_FAILURE</i> constant value (provided by 
  * the <i><A href="http://en.wikipedia.org/wiki/C%2B%2B_Standard_Library">Standard C++ Library</A></i>), otherwise</li></ul>
@@ -61,7 +61,7 @@ int main(void)
 	QTime t;
 
 	/* Now, we validate several functions in the 'Mangrove_hashing.h', plus the 'Mangrove_exportCopyrightDisclaimer()' function in the 'Mangrove_Miscellanea.h' file. */
-	Mangrove_exportCopyrightDisclaimer ("Mangrove_tutorial02");
+	Mangrove_exportCopyrightDisclaimer ("Mangrove_tutorial002");
 	cout<<"\tCreating a new hashing map of the 'std::map' type (involving several 'uint' values as the keys) with "<<ASSOCIATIONS_NUMBER<<" associations ... ";
 	cout.flush();
 	t.start();
