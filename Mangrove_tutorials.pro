@@ -10,6 +10,8 @@
 TEMPLATE = subdirs
 LANGUAGE = C++
 SUBDIRS = \
-		Mangrove_tutorial01 \
-		Mangrove_tutorial02
+		Mangrove_tutorial001 \
+		Mangrove_tutorial002 \
+		Mangrove_tutorial003 \
+		Mangrove_tutorial006
 CONFIG += ordered debug_and_release
