@@ -13,5 +13,7 @@ SUBDIRS = \
 		Mangrove_tutorial001 \
 		Mangrove_tutorial002 \
 		Mangrove_tutorial003 \
+		Mangrove_tutorial004 \
+		Mangrove_tutorial005 \
 		Mangrove_tutorial006
 CONFIG += ordered debug_and_release
