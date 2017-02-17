@@ -36,12 +36,32 @@ using namespace mangrove_tds;
 /**
  * \return <ul><li>the built-in <i>EXIT_SUCCESS</i> constant value (provided by the <i><A href="http://en.wikipedia.org/wiki/C%2B%2B_Standard_Library">Standard C++ Library</A></i>), if all is ok</li><li>the built-in <i>EXIT_FAILURE</i> constant value (provided by 
  * the <i><A href="http://en.wikipedia.org/wiki/C%2B%2B_Standard_Library">Standard C++ Library</A></i>), otherwise</li></ul>
- * \see isQTDebugModeEnabled(), isBigEndian(), isLittleEndian(), getMemoryAmount(), getCurrentMemoryAmount(), getPeakMemoryUsage(), getBoostLibrariesVersion(), mangrove_tds::Mangrove_exportCopyrightDisclaimer(), mangrove_tds::Mangrove_fromQt2Cplustring()
+ * \see checkPointerValidity(), isQTDebugModeEnabled(), isBigEndian(), isLittleEndian(), getMemoryAmount(), getCurrentMemoryAmount(), getPeakMemoryUsage(), getBoostLibrariesVersion(), mangrove_tds::Mangrove_exportCopyrightDisclaimer(), 
+ * mangrove_tds::Mangrove_fromQt2Cplustring()
  */
 int main(void)
 {
+	int v[5];
+	bool b;
+
 	/* Now, we validate several functions in the 'Mangrove_platform.h', plus the 'Mangrove_exportCopyrightDisclaimer()' and the 'Mangrove_fromQt2Cplustring()' functions in the 'Mangrove_Miscellanea.h' file. */
 	Mangrove_exportCopyrightDisclaimer ("Mangrove_tutorial001");
+	cout<<"\tChecking the validity of the 'NULL' pointer ... ";
+	b=checkPointerValidity((void*)NULL);
+	cout<<"ok. ";
+	if(b) cout<<"It is a 'valid' pointer."<<endl;
+	else cout<<"It is not a 'valid' pointer."<<endl;
+	cout<<"\tChecking the validity of the 'nullptr' pointer ... ";
+	b=checkPointerValidity((void*)nullptr);
+	cout<<"ok. ";
+	if(b) cout<<"It is a 'valid' pointer."<<endl;
+	else cout<<"It is not a 'valid' pointer."<<endl;
+	cout<<"\tChecking the validity of the pointer to the array 'v' (containing 5 'int' values) ... ";
+	b=checkPointerValidity(v);
+	cout<<"ok. ";
+	if(b) cout<<"It is a 'valid' pointer."<<endl<<endl;
+	else cout<<"It is not a 'valid' pointer."<<endl<<endl;
+	cout.flush();
 	cout<<"\tThe version of the Boost Libraries, currently in use: "<<getBoostLibrariesVersion()<<endl<<endl;
 	cout<<"\tThe version of the QT Library, currently in use: "<<getQTLibraryVersion()<<endl;
 	if(isQTDebugModeEnabled()) cout<<"\tThe QT library in use is currently including the 'debug' symbols"<<endl;
