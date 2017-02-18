@@ -36,15 +36,15 @@ using namespace mangrove_tds;
 /**
  * \return <ul><li>the built-in <i>EXIT_SUCCESS</i> constant value (provided by the <i><A href="http://en.wikipedia.org/wiki/C%2B%2B_Standard_Library">Standard C++ Library</A></i>), if all is ok</li><li>the built-in <i>EXIT_FAILURE</i> constant value (provided by 
  * the <i><A href="http://en.wikipedia.org/wiki/C%2B%2B_Standard_Library">Standard C++ Library</A></i>), otherwise</li></ul>
- * \see checkPointerValidity(), isQTDebugModeEnabled(), isBigEndian(), isLittleEndian(), getMemoryAmount(), getCurrentMemoryAmount(), getPeakMemoryUsage(), getBoostLibrariesVersion(), mangrove_tds::Mangrove_exportCopyrightDisclaimer(), 
+ * \see checkPointerValidity(), isQTDebugModeEnabled(), isBigEndian(), isLittleEndian(), getMemoryAmount(), getCurrentMemoryAmount(), getPeakMemoryUsage(), getBoostLibrariesVersion(), mangrove_tds::Mangrove_idle(), mangrove_tds::Mangrove_exportCopyrightDisclaimer(), 
  * mangrove_tds::Mangrove_fromQt2Cplustring()
  */
 int main(void)
 {
-	int v[5];
+	int v[5],a=-5;
 	bool b;
 
-	/* Now, we validate several functions in the 'Mangrove_platform.h', plus the 'Mangrove_exportCopyrightDisclaimer()' and the 'Mangrove_fromQt2Cplustring()' functions in the 'Mangrove_Miscellanea.h' file. */
+	/* Now, we validate several functions in the 'Mangrove_platform.h' and in the 'Mangrove_Miscellanea.h' file, starting from the 'Mangrove_exportCopyrightDisclaimer()' and the 'checkPointerValidity()' functions. */
 	Mangrove_exportCopyrightDisclaimer ("Mangrove_tutorial001");
 	cout<<"\tChecking the validity of the 'NULL' pointer ... ";
 	b=checkPointerValidity((void*)NULL);
@@ -62,11 +62,22 @@ int main(void)
 	if(b) cout<<"It is a 'valid' pointer."<<endl<<endl;
 	else cout<<"It is not a 'valid' pointer."<<endl<<endl;
 	cout.flush();
+	
+	/* Now, we validate the 'Mangrove_idle()' template function, as well as the 'Mangrove_IdleClass' template class and the 'Mangrove_IdleStruct' template struct. */
+	cout<<"\tPerforming the echo-service (based on the 'mangrove_tds::Mangrove_idle()' template function) for the 'int' C++ built-in value '"<<a<<"': "<<Mangrove_idle(a)<<endl;
+	cout<<"\tPerforming the echo-service (based on the 'mangrove_tds::Mangrove_IdleStruct' template struct) for the 'int' C++ built-in value '"<<a<<"': "<<Mangrove_IdleStruct<int>().idle(a)<<endl;
+	cout<<"\tPerforming the echo-service (based on the 'mangrove_tds::Mangrove_IdleClass' template class) for the 'int' C++ built-in value '"<<a<<"': "<<Mangrove_IdleClass<int>().idle(a)<<endl<<endl;
+	cout.flush();
+	
+	/* Now, we validate the 'getBoostLibrariesVersion()', the 'getQTLibraryVersion()', and the 'isQTDebugModeEnabled()' functions. */
 	cout<<"\tThe version of the Boost Libraries, currently in use: "<<getBoostLibrariesVersion()<<endl<<endl;
 	cout<<"\tThe version of the QT Library, currently in use: "<<getQTLibraryVersion()<<endl;
 	if(isQTDebugModeEnabled()) cout<<"\tThe QT library in use is currently including the 'debug' symbols"<<endl;
 	else cout<<"\tThe QT library in use is not currently including the 'debug' symbols"<<endl;
 	cout<<"\tThe conversion of a QT string produces the Standard C++ string: '"<<Mangrove_fromQt2Cplustring(QString("QT string"))<<"'"<<endl<<endl;
+	cout.flush();
+	
+	/* Now, we validate the 'isBigEndian()', the 'isLittleEndian()', the 'getMemoryAmount()', the 'getCurrentMemoryAmount()', and the 'getPeakMemoryUsage()' functions. */
 	if(isBigEndian()) cout<<"\tThe current platform is a big-endian machine"<<endl;
 	if(isLittleEndian()) cout<<"\tThe current platform is a little-endian machine"<<endl;
 	cout<<"\tThe RAM amount in the current platform is "<<getMemoryAmount()<<" bytes"<<endl;
