@@ -36,7 +36,7 @@ using namespace mangrove_tds;
 /**
  * \return <ul><li>the built-in <i>EXIT_SUCCESS</i> constant value (provided by the <i><A href="http://en.wikipedia.org/wiki/C%2B%2B_Standard_Library">Standard C++ Library</A></i>), if all is ok</li><li>the built-in <i>EXIT_FAILURE</i> constant value (provided by 
  * the <i><A href="http://en.wikipedia.org/wiki/C%2B%2B_Standard_Library">Standard C++ Library</A></i>), otherwise</li></ul>
- * \see
+ * \see mangrove_tds::Mangrove_exportCopyrightDisclaimer()
  */
 int main(void)
 {
@@ -166,7 +166,7 @@ int main(void)
 	Mangrove_pause();
 	
 	/* Validating the 'Mangrove_isPermutation()' template function for the deques of several template values. */
-	if(Mangrove_isPermutation(d0,d1)==true) cout<<"\tThe 'uint' values in the deque 'd0' are a permutation of the 'uint' values in the deque 'd1"<<endl;
+	if(Mangrove_isPermutation(d0,d1)==true) cout<<"\tThe 'uint' values in the deque 'd0' are a permutation of the 'uint' values in the deque 'd1'"<<endl;
 	else cout<<"\tThe 'uint' values in the deque 'd0' are not a permutation of the 'uint' values in the deque 'd1'"<<endl;
 	cout<<endl;
 	cout.flush();
