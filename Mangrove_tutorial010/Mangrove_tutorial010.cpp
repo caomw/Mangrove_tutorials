@@ -54,13 +54,13 @@ int main(void)
 	d0.push_back(11);
 	d0.push_back(0);
 	cout<<"ok"<<endl;
-	cout<<"\tThe 'debug' representation for the content of the deque 'd0' is the following:"<<endl;
+	cout<<"\tThe 'debug' representation for the content of the deque 'd0' is:"<<endl;
 	Mangrove_debug(d0);
 	cout<<endl;
 	cout.flush();
 	
 	/* Validating the 'Mangrove_exportHybrid()' and the 'Mangrove_reconstructFromHybrid()' template functions for the deques of several template values. */
-	cout<<"\tThe 'hybrid' representation for the content of the deque 'd0' is the following: ";
+	cout<<"\tThe 'hybrid' representation for the content of the deque 'd0' is: ";
 	Mangrove_exportHybrid(d0);
 	cout<<endl<<"\tExporting the 'hybrid' representation for the content of the deque 'd0' on the 'hybrid_deque.txt' file ... ";
 	out.open("hybrid_deque.txt");
@@ -73,7 +73,7 @@ int main(void)
 	Mangrove_reconstructFromHybrid(d1,in);
 	in.close();
 	cout<<"ok"<<endl;
-	cout<<"\tThe 'hybrid' representation for the resulting deque is the following: ";
+	cout<<"\tThe 'hybrid' representation for the resulting deque is: ";
 	Mangrove_exportHybrid(d1);
 	
 	/* Validating the 'Mangrove_theSame()' template function for the deques of several template values. */
@@ -86,7 +86,7 @@ int main(void)
 	d1.clear();
 	
 	/* Validating the '<<' and the '>>' template operators for the deques of several template values. */
-	cout<<"\tThe 'compact' representation for the content of the deque 'd0' is the following: "<<d0;
+	cout<<"\tThe 'compact' representation for the content of the deque 'd0' is: "<<d0;
 	cout.flush();
 	cout<<endl<<"\tExporting the 'compact' representation for the content of the deque 'd0' on the 'compact_deque.txt' file ... ";
 	out.open("compact_deque.txt");
@@ -98,7 +98,7 @@ int main(void)
 	in>>d1;
 	in.close();
 	cout<<"ok"<<endl;
-	cout<<"\tThe 'compact' representation for the resulting deque is the following: "<<d1;
+	cout<<"\tThe 'compact' representation for the resulting deque is: "<<d1;
 	
 	/* Validating the 'Mangrove_theSame()' template function for the deques of several template values. */
 	if(Mangrove_theSame(d0,d1)) cout<<"\tThe reconstructed deque is 'the same as' the initial deque 'd0'"<<endl<<endl;
@@ -121,13 +121,13 @@ int main(void)
 	cout<<"\tRetrieving the canonical projection of the deque 'd0' with respect to the position 0 ... ";
 	Mangrove_findProjection(0,d0,d1);
 	cout<<"ok"<<endl;
-	cout<<"\tThe resulting canonical projection of interest is the following: ";
+	cout<<"\tThe resulting canonical projection of interest is: ";
 	Mangrove_exportHybrid(d1);
 	cout.flush();
 	cout<<"\tRetrieving the canonical projection of the deque 'd0' with respect to the position 4 ... ";
 	Mangrove_findProjection(4,d0,d1);
 	cout<<"ok"<<endl;
-	cout<<"\tThe resulting canonical projection of interest is the following: ";
+	cout<<"\tThe resulting canonical projection of interest is: ";
 	Mangrove_exportHybrid(d1);
 	cout<<endl;
 	cout.flush();
@@ -135,7 +135,7 @@ int main(void)
 	Mangrove_pause();
 	
 	/* Creating a new deque of several 'uint' values. */
-	cout<<"\tThe existing deque 'd0': ";
+	cout<<"\tThe content of the existing deque 'd0' is: ";
 	Mangrove_exportHybrid(d0);
 	cout<<"\tCreating the new deque 'd1', formed by several 'uint' values, ... ";
 	d1.push_back(1);
@@ -144,7 +144,7 @@ int main(void)
 	d1.push_back(11);
 	d1.push_back(54);
 	cout<<"ok"<<endl;
-	cout<<"\tThe content of the new deque 'd1': ";
+	cout<<"\tThe content of the new deque 'd1' is: ";
 	Mangrove_exportHybrid(d1);
 	cout<<endl;
 	cout.flush();
@@ -156,8 +156,8 @@ int main(void)
 	else { cout<<"\tThe deque 'd1' is not 'strictly less than' the deque 'd0' (see the comparison template operator '<')"<<endl; }
 	if( Mangrove_DataComparator<uint>()(d1,d0) ) { cout<<"\tThe deque 'd1' is 'strictly less than' the deque 'd0' (see the 'Mangrove_DataComparator' template class)"<<endl<<endl; }
 	else { cout<<"\tThe deque 'd1' is not 'strictly less than' the deque 'd0' (see the 'Mangrove_DataComparator' template class)"<<endl<<endl; }
-	cout<<"\tThe hashing value of the deque 'd0': "<<boost::hash_value(d0)<<endl;
-	cout<<"\tThe hashing value of the deque 'd1': "<<boost::hash_value(d1)<<endl<<endl;
+	cout<<"\tThe hashing value of the deque 'd0' (see the 'boost::hash_value()' template function) is: "<<boost::hash_value(d0)<<endl;
+	cout<<"\tThe hashing value of the deque 'd1' (see the 'boost::hash_value()' template function) is: "<<boost::hash_value(d1)<<endl<<endl;
 	if( Mangrove_DataComparatorWithHashing<uint>()(d1,d0) ) { cout<<"\tThe deque 'd1' is 'strictly less than' the deque 'd0' (see the 'Mangrove_DataComparatorWithHashing' template class)"<<endl; }
 	else { cout<<"\tThe deque 'd1' is not 'strictly less than' the deque 'd0' (see the 'Mangrove_DataComparatorWithHashing' template class)"<<endl; }
 	if( Mangrove_DataComparatorWithHashing<uint>()(d0,d1) ) { cout<<"\tThe deque 'd0' is 'strictly less than' the deque 'd1' (see the 'Mangrove_DataComparatorWithHashing' template class)"<<endl<<endl; }
@@ -172,10 +172,10 @@ int main(void)
 	cout.flush();
 	
 	/* Validating the 'Mangrove_includes()' template function for the deques of several template values. */
-	if(Mangrove_includes(d0,d1)==true) cout<<"\tThe deque 'd0' contains all 'uint' values of the deque 'd1'"<<endl;
-	else cout<<"\tThe deque 'd0' does not contain all 'uint' values of the deque 'd1'"<<endl;
-	if(Mangrove_includes(d1,d0)==true) cout<<"\tThe deque 'd1' contains all 'uint' values of the deque 'd0'"<<endl;
-	else cout<<"\tThe deque 'd1' does not contain all 'uint' values of the deque 'd0'"<<endl;
+	if(Mangrove_includes(d0,d1)==true) cout<<"\tThe deque 'd0' contains all 'uint' values of the deque 'd1' as a block of consecutive 'uint' values"<<endl;
+	else cout<<"\tThe deque 'd0' does not contain all 'uint' values of the deque 'd1' as a block of consecutive 'uint' values"<<endl;
+	if(Mangrove_includes(d1,d0)==true) cout<<"\tThe deque 'd1' contains all 'uint' values of the deque 'd0' as a block of consecutive 'uint' values"<<endl;
+	else cout<<"\tThe deque 'd1' does not contain all 'uint' values of the deque 'd0' as a block of consecutive 'uint' values"<<endl;
 	cout<<endl;
 	cout.flush();
 	
@@ -183,20 +183,22 @@ int main(void)
 	cout<<"\tIntersecting the deques 'd0' and 'd1' (without sorting the template values in the deques of interest) ... ";
 	Mangrove_intersection(d0,d1,d01);
 	cout<<"ok"<<endl;
-	cout<<"\tThe wrong content for the intersection of interest (obtained without sorting the template values in the deques 'd0' and 'd1') is the following: ";
+	cout<<"\tThe (wrong) content for the intersection of interest (obtained without sorting the template values in the deques 'd0' and 'd1') is: ";
 	Mangrove_exportHybrid(d01);
 	cout<<endl;
 	cout.flush();
 	cout<<"\tIntersecting the deques 'd0' and 'd1' (by also sorting the template values in the deques of interest) ... ";
 	Mangrove_intersection(d0,d1,d01,true);
 	cout<<"ok"<<endl;
-	cout<<"\tThe sorted template values in the updated deque 'd0': ";
+	cout<<"\tThe sorted template values in the updated deque 'd0' are: ";
 	Mangrove_exportHybrid(d0);
-	cout<<"\tThe sorted template values in the updated deque 'd1': ";
+	cout<<"\tThe sorted template values in the updated deque 'd1' are: ";
 	Mangrove_exportHybrid(d1);
-	cout<<"\tThe correct content for the intersection of interest (obtained by also sorting the template values in the deques 'd0' and 'd1') is the following: ";
+	cout<<"\tThe correct content for the intersection of interest (obtained by also sorting the template values in the deques 'd0' and 'd1') is: ";
 	Mangrove_exportHybrid(d01);
 	cout<<endl;
+	
+	/* If we arrive here, then all is ok. */
 	cout<<"\tDeallocating all deques of interest ... ";
 	d0.clear();
 	d1.clear();
