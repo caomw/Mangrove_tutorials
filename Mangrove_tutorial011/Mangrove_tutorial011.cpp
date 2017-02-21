@@ -56,14 +56,14 @@ int main(void)
 	cout<<"ok"<<endl;
 	orig=deque<bool>(d0);
 	cout<<"\tThe deque 'd0' contains "<<d0.size()<<" 'bool' values"<<endl;
-	cout<<"\tThe content of the deque 'd0' is the following: ";
+	cout<<"\tThe content of the deque 'd0' is: ";
 	Mangrove_exportHybrid(d0);
 	cout.flush();
 	cout<<endl<<"\tToggling (negating) the 'bool' values in the deque 'd0' on itself ... ";
 	Mangrove_toggle(d0);
 	cout<<"ok"<<endl;
 	cout<<"\tThe new deque 'd0' contains "<<d0.size()<<" 'bool' values"<<endl;
-	cout<<"\tThe content of the new deque 'd0' is the following: ";
+	cout<<"\tThe content of the new deque 'd0' is: ";
 	Mangrove_exportHybrid(d0);
 	cout.flush();
 	cout<<endl<<"\tToggling (negating) and saving the 'bool' values in the deque 'd0' on the new deque 'd1' ... ";
@@ -71,16 +71,18 @@ int main(void)
 	Mangrove_toggle(d0,d1);
 	cout<<"ok"<<endl;
 	cout<<"\tThe existing deque 'd0' contains "<<d0.size()<<" 'bool' values"<<endl;
-	cout<<"\tThe content of the existing deque 'd0' is the following: ";
+	cout<<"\tThe content of the existing deque 'd0' is: ";
 	Mangrove_exportHybrid(d0);
 	cout.flush();
 	cout<<"\tThe new deque 'd1' contains "<<d1.size()<<" 'bool' values"<<endl;
-	cout<<"\tThe content of the new deque 'd1' is the following: ";
+	cout<<"\tThe content of the new deque 'd1' is: ";
 	Mangrove_exportHybrid(d1);
 	cout.flush();
 	if(Mangrove_theSame(d1,orig)==true) cout<<endl<<"\tThe new deque 'd1' coincides with the original version of the deque 'd0'"<<endl<<endl;
 	else cout<<endl<<"\tThe new deque 'd1' does not coincide with the original version of the deque 'd0'"<<endl<<endl;
 	cout.flush();
+	
+	/* If we arrive here, then all is ok. */
 	cout<<"\tDeallocating all deques of interest ... ";
 	d0.clear();
 	d1.clear();
