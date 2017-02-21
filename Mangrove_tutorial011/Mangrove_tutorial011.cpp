@@ -43,7 +43,7 @@ int main(void)
 	deque<bool> d0,d1,orig;
 
 	/* Now, we validate several functions in the 'Mangrove_Miscellanea.h' file, starting from the 'Mangrove_exportCopyrightDisclaimer()' function. Here, we mainly validate several functions for the deques of the 'bool' values. */
-	Mangrove_exportCopyrightDisclaimer ("Mangrove_tutorial011");
+	Mangrove_exportCopyrightDisclaimer("Mangrove_tutorial011");
 	cout<<"\tCreating the new deque 'd0', formed by several 'bool' values, ... ";
 	cout.flush();
 	d0.push_back(true);
