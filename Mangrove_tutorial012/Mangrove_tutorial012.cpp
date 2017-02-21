@@ -36,7 +36,7 @@ using namespace mangrove_tds;
 /**
  * \return <ul><li>the built-in <i>EXIT_SUCCESS</i> constant value (provided by the <i><A href="http://en.wikipedia.org/wiki/C%2B%2B_Standard_Library">Standard C++ Library</A></i>), if all is ok</li><li>the built-in <i>EXIT_FAILURE</i> constant value (provided by 
  * the <i><A href="http://en.wikipedia.org/wiki/C%2B%2B_Standard_Library">Standard C++ Library</A></i>), otherwise</li></ul>
- * \see
+ * \see mangrove_tds::Mangrove_exportCopyrightDisclaimer()
  */
 int main(void)
 {
@@ -46,7 +46,7 @@ int main(void)
 	ifstream in;
 	
 	/* Now, we validate several functions in the 'Mangrove_Miscellanea.h' file, focused for manipulating the arrays of several template values (here, specialized for the 'uint' values). */
-	Mangrove_exportCopyrightDisclaimer ("Mangrove_tutorial010");
+	Mangrove_exportCopyrightDisclaimer("Mangrove_tutorial012");
 	cout<<"\tCreating the new array 'v0', formed by several 'uint' values, ... ";
 	v0.push_back(3);
 	v0.push_back(0);
