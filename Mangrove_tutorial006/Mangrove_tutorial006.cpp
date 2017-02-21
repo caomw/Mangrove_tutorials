@@ -63,7 +63,7 @@ int main(void)
 	cout<<"\tConverting explicitly the C++ 'double' value 'd1'="<<d1<<" as the corresponding binary word 's' ... ";
 	Mangrove_toBytesSequence(d1,&ss,n);
 	cout<<"ok"<<endl;
-	cout<<"\tThe corresponding binary word 's' with "<<n<<" bytes is the following:"<<endl;
+	cout<<"\tThe corresponding binary word 's' with "<<n<<" bytes is:"<<endl;
 	Mangrove_debug(ss,n);
 	cout<<endl<<endl<<"\tConverting explicitly the binary word 's' as the new C++ 'double' value 'd2' ... ";
 	cout.flush();
@@ -72,13 +72,13 @@ int main(void)
 	if(d==d2) cout<<"\tThe conversion operation is correct, and the result is 'd2'="<<d2<<" (equal to the C++ 'double' value 'd'="<<d<<")"<<endl<<endl;
 	else cout<<"\tSomething went wrong while performing the conversion operation. The result is different from the C++ 'double' value'd'="<<d<<endl<<endl;
 	cout.flush();
-	cout<<"\tThe current content of the binary word 's' with "<<n<<" bytes is the following:"<<endl;
+	cout<<"\tThe current content of the binary word 's' with "<<n<<" bytes is:"<<endl;
 	Mangrove_debug(ss,n);
 	cout<<endl<<endl<<"\tCreating a new copy of the binary word 's' (with "<<n<<" bytes) ... ";
 	cout.flush();
 	sss=nullptr;
 	Mangrove_copyBytesSequence(ss,sizeof(d),&sss);
-	cout<<"ok"<<endl<<"\tThe new copy of the binary word 's' (with "<<n<<" bytes) is the following:"<<endl;
+	cout<<"ok"<<endl<<"\tThe new copy of the binary word 's' (with "<<n<<" bytes) is:"<<endl;
 	Mangrove_debug(sss,sizeof(d));
 	cout<<endl<<endl;
 	cout.flush();
