@@ -54,13 +54,13 @@ int main(void)
 	v0.push_back(11);
 	v0.push_back(0);
 	cout<<"ok"<<endl;
-	cout<<"\tThe 'debug' representation for the content of the array 'v0' is the following:"<<endl;
+	cout<<"\tThe 'debug' representation for the content of the array 'v0' is:"<<endl;
 	Mangrove_debug(v0);
 	cout<<endl;
 	cout.flush();
 	
 	/* Validating the 'Mangrove_exportHybrid()' and the 'Mangrove_reconstructFromHybrid()' template functions for the arrays of several template values. */
-	cout<<"\tThe 'hybrid' representation for the content of the array 'v0' is the following: ";
+	cout<<"\tThe 'hybrid' representation for the content of the array 'v0' is: ";
 	Mangrove_exportHybrid(v0);
 	cout<<endl<<"\tExporting the 'hybrid' representation for the content of the array 'v0' on the 'hybrid_array.txt' file ... ";
 	out.open("hybrid_array.txt");
@@ -73,7 +73,7 @@ int main(void)
 	Mangrove_reconstructFromHybrid(v1,in);
 	in.close();
 	cout<<"ok"<<endl;
-	cout<<"\tThe 'hybrid' representation for the resulting array is the following: ";
+	cout<<"\tThe 'hybrid' representation for the resulting array is: ";
 	Mangrove_exportHybrid(v1);
 	
 	/* Validating the 'Mangrove_theSame()' template function for the arrays of several template values. */
@@ -86,7 +86,7 @@ int main(void)
 	v1.clear();
 	
 	/* Validating the '<<' and the '>>' template operators for the arrays of several template values. */
-	cout<<"\tThe 'compact' representation for the content of the array 'v0' is the following: "<<v0;
+	cout<<"\tThe 'compact' representation for the content of the array 'v0' is: "<<v0;
 	cout.flush();
 	cout<<endl<<"\tExporting the 'compact' representation for the content of the array 'v0' on the 'compact_array.txt' file ... ";
 	out.open("compact_array.txt");
@@ -98,7 +98,7 @@ int main(void)
 	in>>v1;
 	in.close();
 	cout<<"ok"<<endl;
-	cout<<"\tThe 'compact' representation for the resulting array is the following: "<<v1;
+	cout<<"\tThe 'compact' representation for the resulting array is: "<<v1;
 	
 	/* Validating the 'Mangrove_theSame()' template function for the arrays of several template values. */
 	if(Mangrove_theSame(v0,v1)) cout<<"\tThe reconstructed array is 'the same as' the initial array 'v0'"<<endl<<endl;
@@ -121,13 +121,13 @@ int main(void)
 	cout<<"\tRetrieving the canonical projection of the array 'v0' with respect to the position 0 ... ";
 	Mangrove_findProjection(0,v0,v1);
 	cout<<"ok"<<endl;
-	cout<<"\tThe resulting canonical projection of interest is the following: ";
+	cout<<"\tThe resulting canonical projection of interest is: ";
 	Mangrove_exportHybrid(v1);
 	cout.flush();
 	cout<<"\tRetrieving the canonical projection of the array 'v0' with respect to the position 4 ... ";
 	Mangrove_findProjection(4,v0,v1);
 	cout<<"ok"<<endl;
-	cout<<"\tThe resulting canonical projection of interest is the following: ";
+	cout<<"\tThe resulting canonical projection of interest is: ";
 	Mangrove_exportHybrid(v1);
 	cout<<endl;
 	cout.flush();
@@ -135,7 +135,7 @@ int main(void)
 	Mangrove_pause();
 	
 	/* Creating a new array of several 'uint' values. */
-	cout<<"\tThe existing array 'v0': ";
+	cout<<"\tThe content of the existing array 'v0' is: ";
 	Mangrove_exportHybrid(v0);
 	cout<<"\tCreating the new array 'v1', formed by several 'uint' values, ... ";
 	v1.push_back(54);
@@ -144,7 +144,7 @@ int main(void)
 	v1.push_back(3);
 	v1.push_back(0);
 	cout<<"ok"<<endl;
-	cout<<"\tThe content of the new array 'v1': ";
+	cout<<"\tThe content of the new array 'v1' is: ";
 	Mangrove_exportHybrid(v1);
 	cout<<endl;
 	cout.flush();
@@ -156,8 +156,8 @@ int main(void)
 	else { cout<<"\tThe array 'v1' is not 'strictly less than' the array 'v0' (see the comparison template operator '<')"<<endl; }
 	if( Mangrove_DataComparator<uint>()(v1,v0) ) { cout<<"\tThe array 'v1' is 'strictly less than' the array 'v0' (see the 'Mangrove_DataComparator' template class)"<<endl<<endl; }
 	else { cout<<"\tThe array 'v1' is not 'strictly less than' the array 'v0' (see the 'Mangrove_DataComparator' template class)"<<endl<<endl; }
-	cout<<"\tThe hashing value of the array 'v0': "<<boost::hash_value(v0)<<endl;
-	cout<<"\tThe hashing value of the array 'v1': "<<boost::hash_value(v1)<<endl<<endl;
+	cout<<"\tThe hashing value of the array 'v0' is: "<<boost::hash_value(v0)<<endl;
+	cout<<"\tThe hashing value of the array 'v1' is: "<<boost::hash_value(v1)<<endl<<endl;
 	if( Mangrove_DataComparatorWithHashing<uint>()(v1,v0) ) { cout<<"\tThe array 'v1' is 'strictly less than' the array 'v0' (see the 'Mangrove_DataComparatorWithHashing' template class)"<<endl; }
 	else { cout<<"\tThe array 'v1' is not 'strictly less than' the array 'v0' (see the 'Mangrove_DataComparatorWithHashing' template class)"<<endl; }
 	if( Mangrove_DataComparatorWithHashing<uint>()(v0,v1) ) { cout<<"\tThe array 'v0' is 'strictly less than' the array 'v1' (see the 'Mangrove_DataComparatorWithHashing' template class)"<<endl<<endl; }
@@ -172,10 +172,10 @@ int main(void)
 	cout.flush();
 	
 	/* Validating the 'Mangrove_includes()' template function for the arrays of several template values. */
-	if(Mangrove_includes(v0,v1)==true) cout<<"\tThe array 'v0' contains all 'uint' values of the array 'v1'"<<endl;
-	else cout<<"\tThe array 'v0' does not contain all 'uint' values of the array 'v1'"<<endl;
-	if(Mangrove_includes(v1,v0)==true) cout<<"\tThe array 'v1' contains all 'uint' values of the array 'v0'"<<endl;
-	else cout<<"\tThe array 'v1' does not contain all 'uint' values of the array 'v0'"<<endl;
+	if(Mangrove_includes(v0,v1)==true) cout<<"\tThe array 'v0' contains all 'uint' values of the array 'v1' as a block of consecutive 'uint' values"<<endl;
+	else cout<<"\tThe array 'v0' does not contain all 'uint' values of the array 'v1' as a block of consecutive 'uint' values"<<endl;
+	if(Mangrove_includes(v1,v0)==true) cout<<"\tThe array 'v1' contains all 'uint' values of the array 'v0' as a block of consecutive 'uint' values"<<endl;
+	else cout<<"\tThe array 'v1' does not contain all 'uint' values of the array 'v0' as a block of consecutive 'uint' values"<<endl;
 	cout<<endl;
 	cout.flush();
 	
@@ -183,18 +183,18 @@ int main(void)
 	cout<<"\tIntersecting the arrays 'v0' and 'v1' (without sorting the template values in the arrays of interest) ... ";
 	Mangrove_intersection(v0,v1,v01);
 	cout<<"ok"<<endl;
-	cout<<"\tThe wrong content for the intersection of interest (obtained without sorting the template values in the arrays 'v0' and 'v1') is the following: ";
+	cout<<"\tThe (wrong) content for the intersection of interest (obtained without sorting the template values in the arrays 'v0' and 'v1') is: ";
 	Mangrove_exportHybrid(v01);
 	cout<<endl;
 	cout.flush();
 	cout<<"\tIntersecting the arrays 'v0' and 'v1' (by also sorting the template values in the arrays of interest) ... ";
 	Mangrove_intersection(v0,v1,v01,true);
 	cout<<"ok"<<endl;
-	cout<<"\tThe sorted template values in the updated array 'v0': ";
+	cout<<"\tThe sorted template values in the updated array 'v0' are: ";
 	Mangrove_exportHybrid(v0);
-	cout<<"\tThe sorted template values in the updated array 'v1': ";
+	cout<<"\tThe sorted template values in the updated array 'v1' are: ";
 	Mangrove_exportHybrid(v1);
-	cout<<"\tThe correct content for the intersection of interest (obtained by also sorting the template values in the arrays 'v0' and 'v1') is the following: ";
+	cout<<"\tThe correct content for the intersection of interest (obtained by also sorting the template values in the arrays 'v0' and 'v1') is: ";
 	Mangrove_exportHybrid(v01);
 	cout<<endl;
 	
@@ -205,16 +205,19 @@ int main(void)
 	cout.flush();
 	
 	/* Validating the 'Mangrove_includes()' template function for the arrays of several template values. */
-	if(Mangrove_includes(v0,v1)==true) cout<<"\tThe (sorted) array 'v0' contains all 'uint' values of the (sorted) array 'v1'"<<endl;
-	else cout<<"\tThe (sorted) array 'v0' does not contain all 'uint' values of the (sorted) array 'v1'"<<endl;
-	if(Mangrove_includes(v1,v0)==true) cout<<"\tThe (sorted) array 'v1' contains all 'uint' values of the (sorted) array 'v0'"<<endl;
-	else cout<<"\tThe (sorted) array 'v1' does not contain all 'uint' values of the (sorted) array 'v0'"<<endl;
+	if(Mangrove_includes(v0,v1)==true) cout<<"\tThe (sorted) array 'v0' contains all 'uint' values of the (sorted) array 'v1' as a block of consecutive 'uint' values"<<endl;
+	else cout<<"\tThe (sorted) array 'v0' does not contain all 'uint' values of the (sorted) array 'v1' as a block of consecutive 'uint' values"<<endl;
+	if(Mangrove_includes(v1,v0)==true) cout<<"\tThe (sorted) array 'v1' contains all 'uint' values of the (sorted) array 'v0' as a block of consecutive 'uint' values"<<endl;
+	else cout<<"\tThe (sorted) array 'v1' does not contain all 'uint' values of the (sorted) array 'v0' as a block of consecutive 'uint' values"<<endl;
 	cout<<endl;
 	cout.flush();
+	
+	/* If we arrive here, then all is ok. */
 	cout<<"\tDeallocating all arrays of interest ... ";
 	v0.clear();
 	v1.clear();
 	v01.clear();
 	cout<<"ok"<<endl<<endl;
 	cout.flush();
+	return EXIT_SUCCESS;
 }
