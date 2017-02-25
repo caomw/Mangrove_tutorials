@@ -21,8 +21,8 @@
  
 #include "Mangrove_Miscellanea.h"
 #include <cstdlib>
-#include <iostream>
 #include <fstream>
+#include <iostream>
 using namespace std;
 using namespace mangrove_tds;
 
@@ -31,7 +31,7 @@ using namespace mangrove_tds;
  * \file Mangrove_tutorial013.cpp
  * \author <A href="http://davidcanino.github.io">David Canino</A> (e-mail: <A href="mailto:canino.david@gmail.com">David Canino</A>)
  */
-
+ 
 /// The <i>main function</i> for the <i>Mangrove_tutorial013</i> program.
 /**
  * \return <ul><li>the built-in <i>EXIT_SUCCESS</i> constant value (provided by the <i><A href="http://en.wikipedia.org/wiki/C%2B%2B_Standard_Library">Standard C++ Library</A></i>), if all is ok</li><li>the built-in <i>EXIT_FAILURE</i> constant value (provided by 
@@ -40,183 +40,136 @@ using namespace mangrove_tds;
  */
 int main(void)
 {
-	list<uint> l0,l1,l01;
-	uint p;
-	ofstream out;
-	ifstream in;
+	deque<bool> d0,d1,origd;
+	vector<bool> v0,v1,origv;
+	list<bool> l0,l1,origl;
 	
-	/* Now, we validate several functions in the 'Mangrove_Miscellanea.h' file, focused for manipulating the lists of several template values (here, specialized for the 'uint' values). */
+	/* Now, we validate several functions in the 'Mangrove_Miscellanea.h' file, starting from the 'Mangrove_exportCopyrightDisclaimer()' function. First, we validate several functions for the deques of the 'bool' values. */
 	Mangrove_exportCopyrightDisclaimer("Mangrove_tutorial013");
-	cout<<"\tCreating the new list 'l0', formed by several 'uint' values, ... ";
-	l0.push_back(3);
-	l0.push_back(0);
-	l0.push_back(54);
-	l0.push_back(11);
-	l0.push_back(5);
-	cout<<"ok"<<endl;
-	cout<<"\tThe 'debug' representation for the content of the list 'l0' is:"<<endl;
-	Mangrove_debug(l0);
-	cout<<endl;
+	cout<<"\tCreating the new deque 'd0', formed by several 'bool' values, ... ";
 	cout.flush();
+	d0.push_back(true);
+	d0.push_back(true);
+	d0.push_back(true);
+	d0.push_back(false);
+	d0.push_back(false);
+	d0.push_back(true);
+	d0.push_back(false);
+	cout<<"ok"<<endl;
+	origd=deque<bool>(d0);
+	cout<<"\tThe deque 'd0' contains "<<d0.size()<<" 'bool' values"<<endl;
+	cout<<"\tThe content of the deque 'd0' is: ";
+	Mangrove_exportHybrid(d0);
+	cout.flush();
+	cout<<endl<<"\tToggling (negating) the 'bool' values in the deque 'd0' on itself ... ";
+	Mangrove_toggle(d0);
+	cout<<"ok"<<endl;
+	cout<<"\tThe new deque 'd0' contains "<<d0.size()<<" 'bool' values"<<endl;
+	cout<<"\tThe content of the new deque 'd0' is: ";
+	Mangrove_exportHybrid(d0);
+	cout.flush();
+	cout<<endl<<"\tToggling (negating) and saving the 'bool' values in the deque 'd0' on the new deque 'd1' ... ";
+	cout.flush();
+	Mangrove_toggle(d0,d1);
+	cout<<"ok"<<endl;
+	cout<<"\tThe existing deque 'd0' contains "<<d0.size()<<" 'bool' values"<<endl;
+	cout<<"\tThe content of the existing deque 'd0' is: ";
+	Mangrove_exportHybrid(d0);
+	cout.flush();
+	cout<<"\tThe new deque 'd1' contains "<<d1.size()<<" 'bool' values"<<endl;
+	cout<<"\tThe content of the new deque 'd1' is: ";
+	Mangrove_exportHybrid(d1);
+	cout.flush();
+	if(Mangrove_theSame(d1,origd)==true) cout<<endl<<"\tThe new deque 'd1' coincides with the original version of the deque 'd0'"<<endl<<endl;
+	else cout<<endl<<"\tThe new deque 'd1' does not coincide with the original version of the deque 'd0'"<<endl<<endl;
+	cout.flush();
+	Mangrove_pause();
 	
-	/* Validating the 'Mangrove_exportHybrid()' and the 'Mangrove_reconstructFromHybrid()' template functions for the lists of several template values. */
-	cout<<"\tThe 'hybrid' representation for the content of the list 'l0' is: ";
+	/* Then, we validate several functions for the arrays of the 'bool' values. */
+	cout<<"\tCreating the new array 'v0', formed by several 'bool' values, ... ";
+	cout.flush();
+	v0.push_back(true);
+	v0.push_back(true);
+	v0.push_back(true);
+	v0.push_back(false);
+	cout<<"ok"<<endl;
+	origv=vector<bool>(v0);
+	cout<<"\tThe array 'v0' contains "<<v0.size()<<" 'bool' values"<<endl;
+	cout<<"\tThe content of the array 'v0' is: ";
+	Mangrove_exportHybrid(v0);
+	cout.flush();
+	cout<<endl<<"\tToggling (negating) the 'bool' values in the array 'v0' on itself ... ";
+	Mangrove_toggle(v0);
+	cout<<"ok"<<endl;
+	cout<<"\tThe new array 'v0' contains "<<v0.size()<<" 'bool' values"<<endl;
+	cout<<"\tThe content of the new array 'v0' is: ";
+	Mangrove_exportHybrid(v0);
+	cout.flush();
+	cout<<endl<<"\tToggling (negating) and saving the 'bool' values in the array 'v0' on the new array 'v1' ... ";
+	cout.flush();
+	Mangrove_toggle(v0,v1);
+	cout<<"ok"<<endl;
+	cout<<"\tThe existing array 'v0' contains "<<v0.size()<<" 'bool' values"<<endl;
+	cout<<"\tThe content of the existing array 'v0' is: ";
+	Mangrove_exportHybrid(v0);
+	cout.flush();
+	cout<<"\tThe new array 'v1' contains "<<v1.size()<<" 'bool' values"<<endl;
+	cout<<"\tThe content of the new array 'v1' is: ";
+	Mangrove_exportHybrid(v1);
+	cout.flush();
+	if(Mangrove_theSame(v1,origv)==true) cout<<endl<<"\tThe new array 'v1' coincides with the original version of the array 'v0'"<<endl<<endl;
+	else cout<<endl<<"\tThe new array 'v1' does not coincide with the original version of the array 'v0'"<<endl<<endl;
+	cout.flush();
+	Mangrove_pause();
+
+	/* Finally, we validate several functions for the lists of the 'bool' values. */
+	cout<<"\tCreating the new list 'l0', formed by several 'bool' values, ... ";
+	cout.flush();
+	l0.push_back(true);
+	l0.push_back(false);
+	l0.push_back(true);
+	l0.push_back(false);
+	cout<<"ok"<<endl;
+	origl=list<bool>(l0);
+	cout<<"\tThe list 'l0' contains "<<l0.size()<<" 'bool' values"<<endl;
+	cout<<"\tThe content of the list 'l0' is: ";
 	Mangrove_exportHybrid(l0);
-	cout<<endl<<"\tExporting the 'hybrid' representation for the content of the list 'l0' on the 'hybrid_list.txt' file ... ";
-	out.open("hybrid_list.txt");
-	Mangrove_exportHybrid(l0,out);
-	out.close();
-	cout<<"ok"<<endl;
-	l1.resize(5);
-	cout<<"\tReconstructing the content of the list 'l0' from the 'hybrid_list.txt' file ... ";
-	in.open("hybrid_list.txt");
-	Mangrove_reconstructFromHybrid(l1,in);
-	in.close();
-	cout<<"ok"<<endl;
-	cout<<"\tThe 'hybrid' representation for the resulting list is: ";
-	Mangrove_exportHybrid(l1);
-	
-	/* Validating the 'Mangrove_theSame()' template function for the lists of several template values. */
-	if(Mangrove_theSame(l0,l1)) cout<<"\tThe reconstructed list is 'the same as' the initial list 'l0'"<<endl<<endl;
-	else cout<<"\tThe reconstructed list is not 'the same as' the initial list 'l0'"<<endl<<endl;
-	cout<<"\tRemoving the 'hybrid_list.txt' file ... ";
-	Mangrove_removeFile("hybrid_list.txt");
-	cout<<"ok"<<endl<<endl;
 	cout.flush();
-	l1.clear();
-	
-	/* Validating the '<<' and the '>>' template operators for the lists of several template values. */
-	cout<<"\tThe 'compact' representation for the content of the list 'l0' is: "<<l0;
-	cout.flush();
-	cout<<endl<<"\tExporting the 'compact' representation for the content of the list 'l0' on the 'compact_list.txt' file ... ";
-	out.open("compact_list.txt");
-	out<<l0;
-	out.close();
+	cout<<endl<<"\tToggling (negating) the 'bool' values in the list 'l0' on itself ... ";
+	Mangrove_toggle(l0);
 	cout<<"ok"<<endl;
-	cout<<"\tReconstructing the content of the list 'l0' from the 'compact_list.txt' file ... ";
-	in.open("compact_list.txt");
-	in>>l1;
-	in.close();
+	cout<<"\tThe new list 'l0' contains "<<l0.size()<<" 'bool' values"<<endl;
+	cout<<"\tThe content of the new list 'l0' is: ";
+	Mangrove_exportHybrid(l0);
+	cout.flush();
+	cout<<endl<<"\tToggling (negating) and saving the 'bool' values in the list 'l0' on the new list 'l1' ... ";
+	cout.flush();
+	Mangrove_toggle(l0,l1);
 	cout<<"ok"<<endl;
-	cout<<"\tThe 'compact' representation for the resulting list is: "<<l1;
-	
-	/* Validating the 'Mangrove_theSame()' template function for the lists of several template values. */
-	if(Mangrove_theSame(l0,l1)) cout<<"\tThe reconstructed list is 'the same as' the initial list 'l0'"<<endl<<endl;
-	else cout<<"\tThe reconstructed list is not 'the same as' the initial list 'l0'"<<endl<<endl;
-	l1.clear();
-	cout<<"\tRemoving the 'compact_list.txt' file ... ";
-	Mangrove_removeFile("compact_list.txt");
-	cout<<"ok"<<endl<<endl;
-	cout.flush();
-	Mangrove_pause();
-	
-	/* Validating the 'Mangrove_getPosition()' template function for the lists of several template values. */
-	if(Mangrove_getPosition(l0,(uint)5,p)==true) { cout<<"\tThe list 'l0' contains the 'uint' value '5' in position "<<p<<endl; }
-	else { cout<<"\tThe list 'l0' does not contain the 'uint' value '5'"<<endl; }
-	if(Mangrove_getPosition(l0,(uint)49,p)==true) { cout<<"\tThe list 'l0' contains the 'uint' value '49' in position "<<p<<endl<<endl; }
-	else { cout<<"\tThe list 'l0' does not contain the 'uint' value '49'"<<endl<<endl; }
-	cout.flush();
-	
-	/* Validating the 'Mangrove_findProjection()' template function for the lists of several template values. */
-	cout<<"\tRetrieving the canonical projection of the list 'l0' with respect to the position 0 ... ";
-	Mangrove_findProjection(0,l0,l1);
-	cout<<"ok"<<endl;
-	cout<<"\tThe resulting canonical projection of interest is: ";
-	Mangrove_exportHybrid(l1);
-	cout.flush();
-	cout<<"\tRetrieving the canonical projection of the list 'l0' with respect to the position 4 ... ";
-	Mangrove_findProjection(4,l0,l1);
-	cout<<"ok"<<endl;
-	cout<<"\tThe resulting canonical projection of interest is: ";
-	Mangrove_exportHybrid(l1);
-	cout<<endl;
-	cout.flush();
-	l1.clear();
-	Mangrove_pause();
-	
-	/* Creating a new list of several 'uint' values. */
+	cout<<"\tThe existing list 'l0' contains "<<l0.size()<<" 'bool' values"<<endl;
 	cout<<"\tThe content of the existing list 'l0' is: ";
 	Mangrove_exportHybrid(l0);
-	cout<<"\tCreating the new list 'l1', formed by several 'uint' values, ... ";
-	l1.push_back(54);
-	l1.push_back(11);
-	l1.push_back(0);
-	l1.push_back(3);
-	l1.push_back(0);
-	cout<<"ok"<<endl;
+	cout.flush();
+	cout<<"\tThe new list 'l1' contains "<<l1.size()<<" 'bool' values"<<endl;
 	cout<<"\tThe content of the new list 'l1' is: ";
 	Mangrove_exportHybrid(l1);
-	cout<<endl;
 	cout.flush();
-	if(l0<l1) { cout<<"\tThe list 'l0' is 'strictly less than' the list 'l1' (see the (template) comparison operator '<')"<<endl; }
-	else { cout<<"\tThe list 'l0' is not 'strictly less than' the list 'l1' (see the (template) comparison operator '<')"<<endl; }
-	if( Mangrove_DataComparator<uint>()(l0,l1) ) { cout<<"\tThe list 'l0' is 'strictly less than' the list 'l1' (see the 'Mangrove_DataComparator' template class)"<<endl; }
-	else { cout<<"\tThe list 'l0' is not 'strictly less than' the list 'l1' (see the 'Mangrove_DataComparator' template class)"<<endl; }
-	if(l1<l0) { cout<<"\tThe list 'l1' is 'strictly less than' the list 'l0' (see the comparison template operator '<')"<<endl; }
-	else { cout<<"\tThe list 'l1' is not 'strictly less than' the list 'l0' (see the comparison template operator '<')"<<endl; }
-	if( Mangrove_DataComparator<uint>()(l1,l0) ) { cout<<"\tThe list 'l1' is 'strictly less than' the list 'l0' (see the 'Mangrove_DataComparator' template class)"<<endl<<endl; }
-	else { cout<<"\tThe list 'l1' is not 'strictly less than' the list 'l0' (see the 'Mangrove_DataComparator' template class)"<<endl<<endl; }
-	cout<<"\tThe hashing value of the list 'l0' is: "<<boost::hash_value(l0)<<endl;
-	cout<<"\tThe hashing value of the list 'l1' is: "<<boost::hash_value(l1)<<endl<<endl;
-	if( Mangrove_DataComparatorWithHashing<uint>()(l1,l0) ) { cout<<"\tThe list 'l1' is 'strictly less than' the list 'l0' (see the 'Mangrove_DataComparatorWithHashing' template class)"<<endl; }
-	else { cout<<"\tThe list 'l1' is not 'strictly less than' the list 'l0' (see the 'Mangrove_DataComparatorWithHashing' template class)"<<endl; }
-	if( Mangrove_DataComparatorWithHashing<uint>()(l0,l1) ) { cout<<"\tThe list 'l0' is 'strictly less than' the list 'l1' (see the 'Mangrove_DataComparatorWithHashing' template class)"<<endl<<endl; }
-	else { cout<<"\tThe list 'l0' is not 'strictly less than' the list 'l1' (see the 'Mangrove_DataComparatorWithHashing' template class)"<<endl<<endl; }
+	if(Mangrove_theSame(l1,origl)==true) cout<<endl<<"\tThe new list 'l1' coincides with the original version of the list 'l0'"<<endl<<endl;
+	else cout<<endl<<"\tThe new list 'l1' does not coincide with the original version of the list 'l0'"<<endl<<endl;
 	cout.flush();
 	Mangrove_pause();
-	
-	/* Validating the 'Mangrove_isPermutation()' template function for the lists of several template values. */
-	if(Mangrove_isPermutation(l0,l1)==true) cout<<"\tThe 'uint' values in the list 'l0' are a permutation of the 'uint' values in the list 'l1'"<<endl;
-	else cout<<"\tThe 'uint' values in the list 'l0' are not a permutation of the 'uint' values in the list 'l1'"<<endl;
-	cout<<endl;
-	cout.flush();
-	
-	/* Validating the 'Mangrove_includes()' template function for the lists of several template values. */
-	if(Mangrove_includes(l0,l1)==true) cout<<"\tThe list 'l0' contains all 'uint' values of the list 'l1' as a block of consecutive 'uint' values"<<endl;
-	else cout<<"\tThe list 'l0' does not contain all 'uint' values of the list 'l1' as a block of consecutive 'uint' values"<<endl;
-	if(Mangrove_includes(l1,l0)==true) cout<<"\tThe list 'l1' contains all 'uint' values of the list 'l0' as a block of consecutive 'uint' values"<<endl;
-	else cout<<"\tThe list 'l1' does not contain all 'uint' values of the list 'l0' as a block of consecutive 'uint' values"<<endl;
-	cout<<endl;
-	cout.flush();
-	
-	/* Validating the 'Mangrove_intersection()' template function for the lists of several template values. */
-	cout<<"\tIntersecting the lists 'l0' and 'l1' (without sorting the template values in the lists of interest) ... ";
-	Mangrove_intersection(l0,l1,l01);
-	cout<<"ok"<<endl;
-	cout<<"\tThe (wrong) content for the intersection of interest (obtained without sorting the template values in the lists 'l0' and 'l1') is: ";
-	Mangrove_exportHybrid(l01);
-	cout<<endl;
-	cout.flush();
-	cout<<"\tIntersecting the lists 'l0' and 'l1' (by also sorting the template values in the lists of interest) ... ";
-	Mangrove_intersection(l0,l1,l01,true);
-	cout<<"ok"<<endl;
-	cout<<"\tThe sorted template values in the updated list 'l0' are: ";
-	Mangrove_exportHybrid(l0);
-	cout<<"\tThe sorted template values in the updated list 'l1' are: ";
-	Mangrove_exportHybrid(l1);
-	cout<<"\tThe correct content for the intersection of interest (obtained by also sorting the template values in the lists 'l0' and 'l1') is: ";
-	Mangrove_exportHybrid(l01);
-	cout<<endl;
-	
-	/* Validating the 'Mangrove_isPermutation()' template function for the (sorted) lists of several template values. */
-	if(Mangrove_isPermutation(l0,l1)==true) cout<<"\tThe (sorted) 'uint' values in the list 'l0' are a permutation of the (sorted) 'uint' values in the list 'l1'"<<endl;
-	else cout<<"\tThe (sorted) 'uint' values in the list 'l0' are not a permutation of the (sorted) 'uint' values in the list 'l1'"<<endl;
-	cout<<endl;
-	cout.flush();
-	
-	/* Validating the 'Mangrove_includes()' template function for the lists of several template values. */
-	if(Mangrove_includes(l0,l1,true)==true) cout<<"\tThe (sorted) list 'l0' contains all 'uint' values of the (sorted) list 'l1' as a block of consecutive 'uint' values"<<endl;
-	else cout<<"\tThe (sorted) list 'l0' does not contain all 'uint' values of the (sorted) list 'l1' as a block of consecutive 'uint' values"<<endl;
-	if(Mangrove_includes(l1,l0)==true) cout<<"\tThe (sorted) list 'l1' contains all 'uint' values of the (sorted) list 'l0' as a block of consecutive 'uint' values"<<endl;
-	else cout<<"\tThe (sorted) list 'l1' does not contain all 'uint' values of the (sorted) list 'l0' as a block of consecutive 'uint' values"<<endl;
-	cout<<endl;
-	cout.flush();
-	
+
 	/* If we arrive here, then all is ok. */
-	cout<<"\tDeallocating all lists of interest ... ";
+	cout<<"\tDeallocating all auxiliary data structures in this tutorial ... ";
+	d0.clear();
+	d1.clear();
+	origd.clear();
+	v0.clear();
+	v1.clear();
+	origv.clear();
 	l0.clear();
 	l1.clear();
-	l01.clear();
+	origl.clear();
 	cout<<"ok"<<endl<<endl;
 	cout.flush();
 	return EXIT_SUCCESS;
