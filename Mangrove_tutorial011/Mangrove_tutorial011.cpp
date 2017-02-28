@@ -172,10 +172,10 @@ int main(void)
 	cout.flush();
 	
 	/* Validating the 'Mangrove_includes()' template function for the lists of several template values. */
-	if(Mangrove_includes(l0,l1)==true) cout<<"\tThe list 'l0' contains all 'uint' values of the list 'l1' as a block of consecutive 'uint' values"<<endl;
-	else cout<<"\tThe list 'l0' does not contain all 'uint' values of the list 'l1' as a block of consecutive 'uint' values"<<endl;
-	if(Mangrove_includes(l1,l0)==true) cout<<"\tThe list 'l1' contains all 'uint' values of the list 'l0' as a block of consecutive 'uint' values"<<endl;
-	else cout<<"\tThe list 'l1' does not contain all 'uint' values of the list 'l0' as a block of consecutive 'uint' values"<<endl;
+	if(Mangrove_includes(l0,l1)==true) cout<<"\tThe list 'l0' contains all 'uint' values of the list 'l1' in the same order as they appear (but not forming a block of consecutive 'uint' values)"<<endl;
+	else cout<<"\tThe list 'l0' does not contain all 'uint' values of the list 'l1' in the same order as they appear (but not forming a block of consecutive 'uint' values)"<<endl;
+	if(Mangrove_includes(l1,l0)==true) cout<<"\tThe list 'l1' contains all 'uint' values of the list 'l0' in the same order as they appear (but not forming a block of consecutive 'uint' values)"<<endl;
+	else cout<<"\tThe list 'l1' does not contain all 'uint' values of the list 'l0' in the same order as they appear (but not forming a block of consecutive 'uint' values)"<<endl;
 	cout<<endl;
 	cout.flush();
 	
@@ -205,10 +205,10 @@ int main(void)
 	cout.flush();
 	
 	/* Validating the 'Mangrove_includes()' template function for the lists of several template values. */
-	if(Mangrove_includes(l0,l1,true)==true) cout<<"\tThe (sorted) list 'l0' contains all 'uint' values of the (sorted) list 'l1' as a block of consecutive 'uint' values"<<endl;
-	else cout<<"\tThe (sorted) list 'l0' does not contain all 'uint' values of the (sorted) list 'l1' as a block of consecutive 'uint' values"<<endl;
-	if(Mangrove_includes(l1,l0)==true) cout<<"\tThe (sorted) list 'l1' contains all 'uint' values of the (sorted) list 'l0' as a block of consecutive 'uint' values"<<endl;
-	else cout<<"\tThe (sorted) list 'l1' does not contain all 'uint' values of the (sorted) list 'l0' as a block of consecutive 'uint' values"<<endl;
+	if(Mangrove_includes(l0,l1,true)==true) cout<<"\tThe (sorted) list 'l0' contains all 'uint' values of the (sorted) list 'l1' in the same order as they appear (but not forming a block of consecutive 'uint' values)"<<endl;
+	else cout<<"\tThe (sorted) list 'l0' does not contain all 'uint' values of the (sorted) list 'l1' in the same order as they appear (but not forming a block of consecutive 'uint' values)"<<endl;
+	if(Mangrove_includes(l1,l0)==true) cout<<"\tThe (sorted) list 'l1' contains all 'uint' values of the (sorted) list 'l0' in the same order as they appear (but not forming a block of consecutive 'uint' values)"<<endl;
+	else cout<<"\tThe (sorted) list 'l1' does not contain all 'uint' values of the (sorted) list 'l0' in the same order as they appear (but not forming a block of consecutive 'uint' values)"<<endl;
 	cout<<endl;
 	cout.flush();
 	
