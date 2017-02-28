@@ -172,10 +172,10 @@ int main(void)
 	cout.flush();
 	
 	/* Validating the 'Mangrove_includes()' template function for the arrays of several template values. */
-	if(Mangrove_includes(v0,v1)==true) cout<<"\tThe array 'v0' contains all 'uint' values of the array 'v1' as a block of consecutive 'uint' values"<<endl;
-	else cout<<"\tThe array 'v0' does not contain all 'uint' values of the array 'v1' as a block of consecutive 'uint' values"<<endl;
-	if(Mangrove_includes(v1,v0)==true) cout<<"\tThe array 'v1' contains all 'uint' values of the array 'v0' as a block of consecutive 'uint' values"<<endl;
-	else cout<<"\tThe array 'v1' does not contain all 'uint' values of the array 'v0' as a block of consecutive 'uint' values"<<endl;
+	if(Mangrove_includes(v0,v1)==true) cout<<"\tThe array 'v0' contains all 'uint' values of the array 'v1' in the same order as they appear (but not forming a block of consecutive 'uint' values)"<<endl;
+	else cout<<"\tThe array 'v0' does not contain all 'uint' values of the array 'v1' in the same order as they appear (but not forming a block of consecutive 'uint' values)"<<endl;
+	if(Mangrove_includes(v1,v0)==true) cout<<"\tThe array 'v1' contains all 'uint' values of the array 'v0' in the same order as they appear (but not forming a block of consecutive 'uint' values)"<<endl;
+	else cout<<"\tThe array 'v1' does not contain all 'uint' values of the array 'v0' in the same order as they appear (but not forming a block of consecutive 'uint' values)"<<endl;
 	cout<<endl;
 	cout.flush();
 	
@@ -205,10 +205,10 @@ int main(void)
 	cout.flush();
 	
 	/* Validating the 'Mangrove_includes()' template function for the arrays of several template values. */
-	if(Mangrove_includes(v0,v1)==true) cout<<"\tThe (sorted) array 'v0' contains all 'uint' values of the (sorted) array 'v1' as a block of consecutive 'uint' values"<<endl;
-	else cout<<"\tThe (sorted) array 'v0' does not contain all 'uint' values of the (sorted) array 'v1' as a block of consecutive 'uint' values"<<endl;
-	if(Mangrove_includes(v1,v0)==true) cout<<"\tThe (sorted) array 'v1' contains all 'uint' values of the (sorted) array 'v0' as a block of consecutive 'uint' values"<<endl;
-	else cout<<"\tThe (sorted) array 'v1' does not contain all 'uint' values of the (sorted) array 'v0' as a block of consecutive 'uint' values"<<endl;
+	if(Mangrove_includes(v0,v1)==true) cout<<"\tThe (sorted) array 'v0' contains all 'uint' values of the (sorted) array 'v1' in the same order as they appear (but not forming a block of consecutive 'uint' values)"<<endl;
+	else cout<<"\tThe (sorted) array 'v0' does not contain all 'uint' values of the (sorted) array 'v1' in the same order as they appear (but not forming a block of consecutive 'uint' values)"<<endl;
+	if(Mangrove_includes(v1,v0)==true) cout<<"\tThe (sorted) array 'v1' contains all 'uint' values of the (sorted) array 'v0' in the same order as they appear (but not forming a block of consecutive 'uint' values)"<<endl;
+	else cout<<"\tThe (sorted) array 'v1' does not contain all 'uint' values of the (sorted) array 'v0' in the same order as they appear (but not forming a block of consecutive 'uint' values)"<<endl;
 	cout<<endl;
 	cout.flush();
 	
