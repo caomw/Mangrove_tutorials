@@ -172,10 +172,10 @@ int main(void)
 	cout.flush();
 	
 	/* Validating the 'Mangrove_includes()' template function for the deques of several template values. */
-	if(Mangrove_includes(d0,d1)==true) cout<<"\tThe deque 'd0' contains all 'uint' values of the deque 'd1' as a block of consecutive 'uint' values"<<endl;
-	else cout<<"\tThe deque 'd0' does not contain all 'uint' values of the deque 'd1' as a block of consecutive 'uint' values"<<endl;
-	if(Mangrove_includes(d1,d0)==true) cout<<"\tThe deque 'd1' contains all 'uint' values of the deque 'd0' as a block of consecutive 'uint' values"<<endl;
-	else cout<<"\tThe deque 'd1' does not contain all 'uint' values of the deque 'd0' as a block of consecutive 'uint' values"<<endl;
+	if(Mangrove_includes(d0,d1)==true) cout<<"\tThe deque 'd0' contains all 'uint' values of the deque 'd1' in the same order as they appear (but not forming a block of consecutive 'uint' values)"<<endl;
+	else cout<<"\tThe deque 'd0' does not contain all 'uint' values of the deque 'd1' in the same order as they appear (but not forming a block of consecutive 'uint' values)"<<endl;
+	if(Mangrove_includes(d1,d0)==true) cout<<"\tThe deque 'd1' contains all 'uint' values of the deque 'd0' in the same order as they appear (but not forming a block of consecutive 'uint' values)"<<endl;
+	else cout<<"\tThe deque 'd1' does not contain all 'uint' values of the deque 'd0' in the same order as they appear (but not forming a block of consecutive 'uint' values)"<<endl;
 	cout<<endl;
 	cout.flush();
 	
