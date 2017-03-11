@@ -60,6 +60,7 @@ int main(void)
 	cout<<"\tConverting the nested list 'l' into the nested list 'ls', containing several sets of 'uint' values (sorted with respect to the order relation of their hashing values, see the 'Mangrove_DataComparatorWithHashing' template class), ... ";
 	Mangrove_convert(l,ls);
 	cout<<"ok"<<endl<<endl;
+	cout<<"\tNOTE: in this implementation, the hashing value of a given 'uint' value 'x' corresponds with 'x' itself."<<endl<<endl;
 	cout<<"\tThe total number of the 'uint' values in the new nested list 'ls': "<<Mangrove_valuesNumber(ls)<<endl;
 	cout.flush();
 	Mangrove_debug(ls);
