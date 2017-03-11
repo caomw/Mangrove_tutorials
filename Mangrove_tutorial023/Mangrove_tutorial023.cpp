@@ -70,7 +70,7 @@ int main(void)
 	vector<uint> v;
 	
 	/* Now, we validate several functions in the 'Mangrove_Miscellanea.h' file, focused for comparing sets and other containers of several template values (here, specialized for the 'uint' values) by using the custom functions for sorting their 'uint' values. */
-	Mangrove_exportCopyrightDisclaimer("Mangrove_tutorial014");
+	Mangrove_exportCopyrightDisclaimer("Mangrove_tutorial023");
 	cout<<"\tCreating the new set 's0', formed by several 'uint' values (sorted with respect to the order relation of their hashing values, see the 'Mangrove_DataComparatorWithHashing' template class), ... ";
 	s0.insert(3);
 	s0.insert(0);
