@@ -43,11 +43,11 @@ int main(void)
 {
 	ofstream out;
 	ifstream in;
-	Mangrove_RawFace r1,r1a;
 
 	/* First, we export the header for the tutorial. Then, we validate the 'raw faces'. */
-	Mangrove_exportCopyrightDisclaimer("Mangrove_tutorial025");
+	Mangrove_exportCopyrightDisclaimer("Mangrove_tutorial026");
 	cout<<"\tCreating a not initialized 'raw face' 'r1' ... ";
+	Mangrove_RawFace r1;
 	cout<<"ok"<<endl;
 	if(r1.isSerializable()==true) cout<<"\tA generic 'raw face' is 'serializable' (including the 'raw face' 'r1')."<<endl;
 	else cout<<"\tA generic 'raw face' is not 'serializable' (including the 'raw face' 'r1')."<<endl;
@@ -68,6 +68,7 @@ int main(void)
 	Mangrove_export(&r1,out);
 	out.close();
 	cout<<"ok"<<endl<<"\tReconstructing a new 'raw face' by reading and parsing the 'raw face' 'f1' from the 'raw_face.txt' file .. ";
+	Mangrove_RawFace r1a;
 	in.open("raw_face.txt");
 	Mangrove_reconstruct(&r1a,in);
 	cout<<"ok"<<endl;
