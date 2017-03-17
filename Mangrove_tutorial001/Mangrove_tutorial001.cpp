@@ -26,13 +26,13 @@
 using namespace std;
 using namespace mangrove_tds;
 
-/// The <i>main function</i> for the <i>Mangrove_tutorial001</i> program.
+/// The <i>main function</i> for the <i>'Mangrove_tutorial001'</i> program.
 /**
  * \file Mangrove_tutorial001.cpp
  * \author <A href="http://davidcanino.github.io">David Canino</A> (e-mail: <A href="mailto:canino.david@gmail.com">David Canino</A>)
  */
  
-/// The <i>main function</i> for the <i>Mangrove_tutorial001</i> program.
+/// The <i>main function</i> for the <i>'Mangrove_tutorial001'</i> program.
 /**
  * \return <ul><li>the built-in <i>EXIT_SUCCESS</i> constant value (provided by the <i><A href="http://en.wikipedia.org/wiki/C%2B%2B_Standard_Library">Standard C++ Library</A></i>), if all is ok</li><li>the built-in <i>EXIT_FAILURE</i> constant value (provided by 
  * the <i><A href="http://en.wikipedia.org/wiki/C%2B%2B_Standard_Library">Standard C++ Library</A></i>), otherwise</li></ul>

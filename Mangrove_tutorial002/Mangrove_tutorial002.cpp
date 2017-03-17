@@ -7,7 +7,7 @@
  *
  * The 'Tutorial Examples' are distributed independently on the 'Mangrove TDS Library' on the GitHub repository: 'http://github.com/davidcanino/Mangrove_tutorials'
  *
- * Last update: February 2017
+ * Last update: March 2017
  *                                                                    
  * This program is Free Software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published
  * by the Free Software Foundation; either version 3 of the License, or (at your option) any later version.                                       
@@ -28,7 +28,7 @@
 using namespace std;
 using namespace mangrove_tds;
 
-/// The <i>main function</i> for the <i>Mangrove_tutorial002</i> program.
+/// The <i>main function</i> for the <i>'Mangrove_tutorial002'</i> program.
 /**
  * \file Mangrove_tutorial002.cpp
  * \author <A href="http://davidcanino.github.io">David Canino</A> (e-mail: <A href="mailto:canino.david@gmail.com">David Canino</A>)
@@ -43,7 +43,7 @@ using namespace mangrove_tds;
  */
 #define ASSOCIATIONS_NUMBER 1000000
 
-/// The <i>main function</i> for the <i>Mangrove_tutorial002</i> program.
+/// The <i>main function</i> for the <i>'Mangrove_tutorial002'</i> program.
 /**
  * \return <ul><li>the built-in <i>EXIT_SUCCESS</i> constant value (provided by the <i><A href="http://en.wikipedia.org/wiki/C%2B%2B_Standard_Library">Standard C++ Library</A></i>), if all is ok</li><li>the built-in <i>EXIT_FAILURE</i> constant value (provided by 
  * the <i><A href="http://en.wikipedia.org/wiki/C%2B%2B_Standard_Library">Standard C++ Library</A></i>), otherwise</li></ul>
