@@ -7,7 +7,7 @@
  *
  * The 'Tutorial Examples' are distributed independently on the 'Mangrove TDS Library' on the GitHub repository: 'http://github.com/davidcanino/Mangrove_tutorials'
  *
- * Last update: February 2017
+ * Last update: March 2017
  *                                                                    
  * This program is Free Software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published
  * by the Free Software Foundation; either version 3 of the License, or (at your option) any later version.                                       
@@ -39,30 +39,63 @@ using namespace mangrove_tds;
  */
 int main(void)
 {
-	/* Now, we extract the range and the number of the bytes for the C++ built-in type, and validate the 'Mangrove_exportCopyrightDisclaimer()' function in the 'Mangrove_Miscellanea.h' file. */
-	Mangrove_exportCopyrightDisclaimer ("Mangrove_tutorial003");
-	cout<<"\tThe size of the 'bool' C++ built-in type is: "<<sizeof(bool)<<" byte ("<<(sizeof(bool)*8)<<" bits)"<<endl;
-	cout<<"\tThe range for the values of the C++ built-in 'bool' type is: [ "<<std::numeric_limits<bool>::min()<<" , "<<std::numeric_limits<bool>::max()<<" ]"<<endl<<endl;
-	cout<<"\tThe size of the 'char' C++ built-in type is: "<<sizeof(char)<<" byte ("<<(sizeof(char)*8)<<" bits)"<<endl;
-	cout<<"\tThe range for the values of the C++ built-in 'char' type is: [ "<<(int)std::numeric_limits<char>::min()<<" , "<<(int)std::numeric_limits<char>::max()<<" ]"<<endl<<endl;
-	cout<<"\tThe size of the 'unsigned char (uchar)' C++ built-in type is: "<<sizeof(uchar)<<" byte ("<<(sizeof(uchar)*8)<<" bits)"<<endl;
-	cout<<"\tThe range for the values of the C++ built-in 'unsigned char (uchar)' type is: [ "<<(uint)std::numeric_limits<unsigned char>::min()<<" , "<<(uint)std::numeric_limits<unsigned char>::max()<<" ]"<<endl<<endl;
-	cout<<"\tThe size of the 'short' C++ built-in type is: "<<sizeof(short)<<" bytes ("<<(sizeof(short)*8)<<" bits)"<<endl;
-	cout<<"\tThe range for the values of the C++ built-in 'short' type is: [ "<<std::numeric_limits<short>::min()<<" , "<<std::numeric_limits<short>::max()<<" ]"<<endl<<endl;
-	cout<<"\tThe size of the 'unsigned short (ushort)' C++ built-in type is: "<<sizeof(ushort)<<" bytes ("<<(sizeof(ushort)*8)<<" bits)"<<endl;
-	cout<<"\tThe range for the values of the C++ built-in 'unsigned short (ushort)' type is: [ "<<std::numeric_limits<unsigned short>::min()<<" , "<<std::numeric_limits<unsigned short>::max()<<" ]"<<endl<<endl;
-	cout<<"\tThe size of the 'int' C++ built-in type is: "<<sizeof(int)<<" bytes ("<<(sizeof(int)*8)<<" bits)"<<endl;
-	cout<<"\tThe range for the values of the C++ built-in 'int' type is: [ "<<std::numeric_limits<int>::min()<<" , "<<std::numeric_limits<int>::max()<<" ]"<<endl<<endl;
-	cout<<"\tThe size of the 'unsigned int (uint)' C++ built-in type is: "<<sizeof(uint)<<" bytes ("<<(sizeof(uint)*8)<<" bits)"<<endl;
-	cout<<"\tThe range for the values of the C++ built-in 'unsigned int (uint)' type is: [ "<<std::numeric_limits<unsigned int>::min()<<" , "<<std::numeric_limits<unsigned int>::max()<<" ]"<<endl<<endl;
-	cout<<"\tThe size of the 'long' C++ built-in type is: "<<sizeof(long)<<" bytes ("<<(sizeof(long)*8)<<" bits)"<<endl;
-	cout<<"\tThe range for the values of the C++ built-in 'long' type is: [ "<<std::numeric_limits<long>::min()<<" , "<<std::numeric_limits<long>::max()<<" ]"<<endl<<endl;
-	cout<<"\tThe size of the 'unsigned long (ulong)' C++ built-in type is: "<<sizeof(ulong)<<" bytes ("<<(sizeof(ulong)*8)<<" bits)"<<endl;
-	cout<<"\tThe range for the values of the C++ built-in 'unsigned long (ulong)' type is: [ "<<std::numeric_limits<unsigned long>::min()<<" , "<<std::numeric_limits<unsigned long>::max()<<" ]"<<endl<<endl;
-	cout<<"\tThe size of the 'float' C++ built-in type is: "<<sizeof(float)<<" bytes ("<<(sizeof(float)*8)<<" bits)"<<endl;
-	cout<<"\tThe range for the values of the C++ built-in 'float' type is: [ "<<std::numeric_limits<float>::min()<<" , "<<std::numeric_limits<float>::max()<<" ]"<<endl<<endl;
-	cout<<"\tThe size of the 'double' C++ built-in type is: "<<sizeof(double)<<" bytes ("<<(sizeof(double)*8)<<" bits)"<<endl;
-	cout<<"\tThe range for the values of the C++ built-in 'double' type is: [ "<<std::numeric_limits<double>::min()<<" , "<<std::numeric_limits<double>::max()<<" ]"<<endl<<endl;
+	/* This is the 'Mangrove_tutorial003' tutorial, where we extract the ranges of some basic C++ built-in types. */
+	Mangrove_exportCopyrightDisclaimer ("The 'Mangrove_tutorial003' Tutorial");
+	cout.flush();
+	
+	/* TASK #1 - extracting the ranges of the values, that can be represented by using some basic C++ built-in types. We start from the 'boolean (bool)' C++ built-in type. */
+	cout<<"\tThe size of the 'boolean (bool)' C++ built-in type is "<<sizeof(bool)<<" byte ("<<(sizeof(bool)*8)<<" bits)."<<endl;
+	cout<<"\tThe range for the values, that can be represented by using the C++ built-in 'boolean (bool)' type, is [ "<<std::numeric_limits<bool>::min()<<" , "<<std::numeric_limits<bool>::max()<<" ]."<<endl<<endl;
+	cout.flush();
+	
+	/* TASK #2 - extracting the ranges of the values, that can be represented by using the 'character (char)' C++ built-in type. */
+	cout<<"\tThe size of the 'character (char)' C++ built-in type is "<<sizeof(char)<<" byte ("<<(sizeof(char)*8)<<" bits)."<<endl;
+	cout<<"\tThe range for the values, that can be represented by using the 'character (char)' C++ built-in ' type, is [ "<<(int)std::numeric_limits<char>::min()<<" , "<<(int)std::numeric_limits<char>::max()<<" ]."<<endl<<endl;
+	cout.flush();
+	
+	/* TASK #2 - extracting the ranges of the values, that can be represented by using the 'unsigned char (uchar)' C++ built-in type. */
+	cout<<"\tThe size of the 'unsigned character (uchar)' C++ built-in type is "<<sizeof(uchar)<<" byte ("<<(sizeof(uchar)*8)<<" bits)."<<endl;
+	cout<<"\tThe range for the values of the 'unsigned character (uchar)' C++ built-in type is [ "<<(uint)std::numeric_limits<unsigned char>::min()<<" , "<<(uint)std::numeric_limits<unsigned char>::max()<<" ]."<<endl<<endl;
+	cout.flush();
+	
+	/* TASK #3 - extracting the ranges of the values, that can be represented by using the 'short integer (short)' C++ built-in type. */
+	cout<<"\tThe size of the 'short integer (short)' C++ built-in type is "<<sizeof(short)<<" bytes ("<<(sizeof(short)*8)<<" bits)."<<endl;
+	cout<<"\tThe range for the values of the 'short integer (short)' type is: [ "<<std::numeric_limits<short>::min()<<" , "<<std::numeric_limits<short>::max()<<" ]."<<endl<<endl;
+	cout.flush();
+	
+	/* TASK #4 - extracting the ranges of the values, that can be represented by using the 'unsigned short integer (ushort)' C++ built-in type. */
+	cout<<"\tThe size of the 'unsigned short integer (ushort)' C++ built-in type is "<<sizeof(ushort)<<" bytes ("<<(sizeof(ushort)*8)<<" bits)."<<endl;
+	cout<<"\tThe range for the values of the 'unsigned short integer (ushort)' type is: [ "<<std::numeric_limits<ushort>::min()<<" , "<<std::numeric_limits<ushort>::max()<<" ]."<<endl<<endl;
+	cout.flush();
+	
+	/* TASK #5 - extracting the ranges of the values, that can be represented by using the 'integer (int)' C++ built-in type. */
+	cout<<"\tThe size of the 'integer (int)' C++ built-in type is "<<sizeof(int)<<" bytes ("<<(sizeof(int)*8)<<" bits)."<<endl;
+	cout<<"\tThe range for the values of the 'integer (int)' type is: [ "<<std::numeric_limits<int>::min()<<" , "<<std::numeric_limits<int>::max()<<" ]."<<endl<<endl;
+	cout.flush();
+	
+	/* TASK #6 - extracting the ranges of the values, that can be represented by using the 'unsigned integer (uint)' C++ built-in type. */
+	cout<<"\tThe size of the 'unsigned integer (uint)' C++ built-in type is "<<sizeof(uint)<<" bytes ("<<(sizeof(uint)*8)<<" bits)."<<endl;
+	cout<<"\tThe range for the values of the 'unsigned integer (uint)' type is: [ "<<std::numeric_limits<uint>::min()<<" , "<<std::numeric_limits<uint>::max()<<" ]."<<endl<<endl;
+	cout.flush();
+	
+	/* TASK #7 - extracting the ranges of the values, that can be represented by using the 'long integer (long)' C++ built-in type. */
+	cout<<"\tThe size of the 'long integer (long)' C++ built-in type is "<<sizeof(long)<<" bytes ("<<(sizeof(long)*8)<<" bits)."<<endl;
+	cout<<"\tThe range for the values of the 'long integer (long)' type is: [ "<<std::numeric_limits<long>::min()<<" , "<<std::numeric_limits<long>::max()<<" ]."<<endl<<endl;
+	cout.flush();
+	
+	/* TASK #8 - extracting the ranges of the values, that can be represented by using the 'unsigned long integer (ulong)' C++ built-in type. */
+	cout<<"\tThe size of the 'unsigned long integer (ulong)' C++ built-in type is "<<sizeof(ulong)<<" bytes ("<<(sizeof(ulong)*8)<<" bits)."<<endl;
+	cout<<"\tThe range for the values of the 'unsigned long integer (ulong)' type is: [ "<<std::numeric_limits<ulong>::min()<<" , "<<std::numeric_limits<ulong>::max()<<" ]."<<endl<<endl;
+	cout.flush();
+	
+	/* TASK #9 - extracting the ranges of the values, that can be represented by using the 'single floating-point (float)' C++ built-in type. */
+	cout<<"\tThe size of the 'single floating-point (float)' C++ built-in type is "<<sizeof(float)<<" bytes ("<<(sizeof(float)*8)<<" bits)."<<endl;
+	cout<<"\tThe range for the values of the 'single floating-point (float)' type is: [ "<<std::numeric_limits<float>::min()<<" , "<<std::numeric_limits<float>::max()<<" ]."<<endl<<endl;
+	cout.flush();
+	
+	/* TASK #10 - extracting the ranges of the values, that can be represented by using the 'double floating-point (double)' C++ built-in type. */
+	cout<<"\tThe size of the 'double floating-point (double)' C++ built-in type is "<<sizeof(double)<<" bytes ("<<(sizeof(double)*8)<<" bits)."<<endl;
+	cout<<"\tThe range for the values of the 'double floating-point (double)' type is: [ "<<std::numeric_limits<double>::min()<<" , "<<std::numeric_limits<double>::max()<<" ]."<<endl<<endl;
 	cout.flush();
 	return EXIT_SUCCESS;
 }

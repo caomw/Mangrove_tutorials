@@ -18,12 +18,12 @@
  *
  * Mangrove_tutorial002.cpp - the 'Tutorial Example-002' for the 'Mangrove TDS Library 3.0'.
  *************************************************************************************************************************************************************************/
- 
-#include "Mangrove_hashing.h"
-#include "Mangrove_Miscellanea.h"
+
 #include <cstdlib>
 #include <iostream>
 #include <map>
+#include "Mangrove_hashing.h"
+#include "Mangrove_Miscellanea.h"
 #include "QTime"
 using namespace std;
 using namespace mangrove_tds;
@@ -60,15 +60,18 @@ int main(void)
 	uint num;
 	QTime t;
 
-	/* Now, we validate several functions in the 'Mangrove_hashing.h', plus the 'Mangrove_exportCopyrightDisclaimer()' function in the 'Mangrove_Miscellanea.h' file. */
-	Mangrove_exportCopyrightDisclaimer ("Mangrove_tutorial002");
-	cout<<"\tCreating a new hashing map of the 'std::map' type (involving several 'uint' values as the keys) with "<<ASSOCIATIONS_NUMBER<<" associations ... ";
+	/* This is the 'Mangrove_tutorial002' tutorial, where we validate several functions in the 'Mangrove_hashing.h', plus the 'Mangrove_exportCopyrightDisclaimer()' function in the 'Mangrove_Miscellanea.h' file. */
+	Mangrove_exportCopyrightDisclaimer ("The 'Mangrove_tutorial002' Tutorial");
+	cout.flush();
+	
+	/* TASK #1 - validating the hashing maps of the 'std::map' type, provided by the 'Standard Template Library'. Here, the key is one 'uint' C++- built-in value. */
+	cout<<"\tCreating a new hashing map of the 'std::map' type (involving several 'uint' C++ built-in values as the keys) with "<<ASSOCIATIONS_NUMBER<<" associations ... ";
 	cout.flush();
 	t.start();
 	for(unsigned int k=0;k<ASSOCIATIONS_NUMBER;k++) { map_std[k]=k; }
-	cout<<"ok [ in "<<t.elapsed()<<" ms ]"<<endl;
+	cout<<"ok [ in "<<t.elapsed()<<" ms ]."<<endl;
 	cout.flush();
-	cout<<"\tNavigating all associations, involving one 'uint' value (as the key), in the hashing map of the 'std::map' type (provided by the Standard Template Library) ... ";
+	cout<<"\tNavigating all associations, involving one 'uint' C++ built-in value (as the key), in the hashing map of the 'std::map' type (provided by the 'Standard Template Library') ... ";
 	cout.flush();
 	num=0;
 	for(unsigned int k=0;k<ASSOCIATIONS_NUMBER;k++)
@@ -79,19 +82,19 @@ int main(void)
 	}
 	
 	/* Now, we export the mean times for the hashing map of the 'std::map' type (see the 'Mangrove_computeMean()' function). */
-	cout<<"ok"<<endl<<"\tThe total time for this traversal: "<<num<<" ms"<<endl<<"\tThe mean time for accessing an association: "<<Mangrove_computeMean(num,ASSOCIATIONS_NUMBER)<<endl<<endl;
+	cout<<"ok"<<endl<<"\tThe total time for this traversal is "<<num<<" ms."<<endl<<"\tThe mean time for accessing an association is "<<Mangrove_computeMean(num,ASSOCIATIONS_NUMBER)<<" ms."<<endl<<endl;
 	cout.flush();
 	map_std.clear();
 	
-	/* Now, we validate the efficiency of the hashing table, provided by the Google SparseHash Library. First, we analyze the hashing map of the 'google::dense_hash_map' type. */
-	cout<<"\tCreating a new hashing map of the 'google::dense_hash_map' type (involving several 'uint' values as the keys) with "<<ASSOCIATIONS_NUMBER<<" associations ... ";
+	/* TASK #2 - validating the hashing maps of the 'google::dense_hash_map' type, provided by the 'Google SparseHash Library'. Here, the key is one 'uint' C++- built-in value. */
+	cout<<"\tCreating a new hashing map of the 'google::dense_hash_map' type (involving several 'uint' C++ built-in values as the keys) with "<<ASSOCIATIONS_NUMBER<<" associations ... ";
 	cout.flush();
 	map_google.set_empty_key(std::numeric_limits<uint>::max());
 	t.restart();
 	for(unsigned int k=0;k<ASSOCIATIONS_NUMBER;k++) { map_google[k]=k; }
-	cout<<"ok [ in "<<t.elapsed()<<" ms ]"<<endl;
+	cout<<"ok [ in "<<t.elapsed()<<" ms ]."<<endl;
 	cout.flush();
-	cout<<"\tNavigating all associations, involving one 'uint' value (as the key), in the hashing map of the 'google::dense_hash_map' type (provided by the Google SparseHash Library) ... ";
+	cout<<"\tNavigating all associations, involving one 'uint' C++ built-in value (as the key), in the hashing map of the 'google::dense_hash_map' type (provided by the 'Google SparseHash Library') ... ";
 	cout.flush();
 	num=0;
 	for(unsigned int k=0;k<ASSOCIATIONS_NUMBER;k++)
@@ -101,19 +104,19 @@ int main(void)
 		num=num+t.elapsed();
 	}
 	
-	/* Now, we export the mean times for the hashing map of the 'google::dense_hash_map' type (provided by the Google SparseHash Library). */
-	cout<<"ok"<<endl<<"\tThe total time for this traversal: "<<num<<" ms"<<endl<<"\tThe mean time for accessing an association: "<<Mangrove_computeMean(num,ASSOCIATIONS_NUMBER)<<endl<<endl;
+	/* Now, we export the mean times for the hashing map of the 'google::dense_hash_map' type (provided by the 'Google SparseHash Library'). */
+	cout<<"ok"<<endl<<"\tThe total time for this traversal is "<<num<<" ms."<<endl<<"\tThe mean time for accessing an association is "<<Mangrove_computeMean(num,ASSOCIATIONS_NUMBER)<<" ms."<<endl<<endl;
 	cout.flush();
 	map_google.clear();
 	
-	/* Now, we validate the efficiency of the hashing table, provided by the Google SparseHash Library. Now, we analyze the hashing map of the 'google::sparse_hash_map' type */
-	cout<<"\tCreating a new hashing map of the 'google::sparse_hash_map' type (involving several 'uint' values as the keys) with "<<ASSOCIATIONS_NUMBER<<" associations ... ";
+	/* TASK #3 - validating the hashing maps of the 'google::sparse_hash_map' type, provided by the 'Google SparseHash Library'. Here, the key is one 'uint' C++- built-in value. */
+	cout<<"\tCreating a new hashing map of the 'google::sparse_hash_map' type (involving several 'uint' C++ built-in values as the keys) with "<<ASSOCIATIONS_NUMBER<<" associations ... ";
 	cout.flush();
 	t.restart();
 	for(unsigned int k=0;k<ASSOCIATIONS_NUMBER;k++) { map_google_sparse[k]=k; }
-	cout<<"ok [ in "<<t.elapsed()<<" ms ]"<<endl;
+	cout<<"ok [ in "<<t.elapsed()<<" ms ]."<<endl;
 	cout.flush();
-	cout<<"\tNavigating all associations, involving one 'uint' value (as the key), in the hashing map of the 'google::sparse_hash_map' type (provided by the Google SparseHash Library) ... ";
+	cout<<"\tNavigating all associations, involving one 'uint' C++ built-in value (as the key), in the hashing map of the 'google::sparse_hash_map' type (provided by the 'Google SparseHash Library') ... ";
 	cout.flush();
 	num=0;
 	for(unsigned int k=0;k<ASSOCIATIONS_NUMBER;k++)
@@ -123,13 +126,13 @@ int main(void)
 		num=num+t.elapsed();
 	}
 	
-	/* Now, we export the mean times for the hashing map of the 'google::sparse_hash_map' type (provided by the Google SparseHash Library). */
-	cout<<"ok"<<endl<<"\tThe total time for this traversal: "<<num<<" ms"<<endl<<"\tThe mean time for accessing an association: "<<Mangrove_computeMean(num,ASSOCIATIONS_NUMBER)<<endl<<endl;
+	/* Now, we export the mean times for the hashing map of the 'google::sparse_hash_map' type (provided by the 'Google SparseHash Library'). */
+	cout<<"ok"<<endl<<"\tThe total time for this traversal is "<<num<<" ms."<<endl<<"\tThe mean time for accessing an association is "<<Mangrove_computeMean(num,ASSOCIATIONS_NUMBER)<<" ms."<<endl<<endl;
 	cout.flush();
 	map_google_sparse.clear();
 	
-	/* Now, we validate the efficiency of the hashing table, provided by the Standard Template Library (STL). Here, the key is a generic array, formed by 4 'uint' values. */
-	cout<<"\tCreating a new hashing map of the 'std::map' type (involving several arrays, formed by 4 'uint' values, as the keys) with "<<ASSOCIATIONS_NUMBER<<" associations ... ";
+	/* TASK #4 - validating the hashing maps of the 'std::map' type, provided by the 'Standard Template Library'. Here, the key is a generic array, formed by 4 'uint' C++- built-in values. */
+	cout<<"\tCreating a new hashing map of the 'std::map' type (involving several arrays, formed by 4 C++ built-in 'uint' values, as the keys) with "<<ASSOCIATIONS_NUMBER<<" associations ... ";
 	cout.flush();
 	num=0;
 	for(unsigned int k=0;k<ASSOCIATIONS_NUMBER;k++)
@@ -147,9 +150,9 @@ int main(void)
 	}
 	
 	/* Now, we export the result, then we study performance for the hashing map of the 'std::map' type (see the 'Mangrove_computeMean()' function). */
-	cout<<"ok [ in "<<num<<" ms ]"<<endl;
+	cout<<"ok [ in "<<num<<" ms ]."<<endl;
 	cout.flush();
-	cout<<"\tNavigating all associations, involving one array of 4 'uint' values (as the key), in the hashing map of the 'std::map' type (provided by the Standard Template Library) ... ";
+	cout<<"\tNavigating all associations, involving one array of 4 'uint' C++ built-in values (as the key), in the hashing map of the 'std::map' type (provided by the 'Standard Template Library') ... ";
 	cout.flush();
 	num=0;
 	for(unsigned int k=0;k<ASSOCIATIONS_NUMBER;k++)
@@ -167,12 +170,12 @@ int main(void)
 	}
 	
 	/* Now, we export the mean times for the hashing map of the 'std::map' type. */
-	cout<<"ok"<<endl<<"\tThe total time for this traversal: "<<num<<" ms"<<endl<<"\tThe mean time for accessing an association: "<<Mangrove_computeMean(num,ASSOCIATIONS_NUMBER)<<endl<<endl;
+	cout<<"ok"<<endl<<"\tThe total time for this traversal is "<<num<<" ms."<<endl<<"\tThe mean time for accessing an association is "<<Mangrove_computeMean(num,ASSOCIATIONS_NUMBER)<<" ms."<<endl<<endl;
 	cout.flush();
 	map_arr_std.clear();
 	
-	/* Now, we validate the efficiency of the hashing table of the 'google_dense_hash_map' type, provided by the Google SparseHash Library. Here, the key is a generic array, formed by 4 'uint' values. */
-	cout<<"\tCreating a new hashing map of the 'google::dense_hash_map' type (involving several arrays, formed by 4 'uint' values, as the keys) with "<<ASSOCIATIONS_NUMBER<<" associations ... ";
+	/* TASK #5 - validating the hashing maps of the 'google::dense_hash_map' type, provided by the 'Google SparseHash Library'. Here, the key is a generic array, formed by 4 'uint' C++ built-in values. */
+	cout<<"\tCreating a new hashing map of the 'google::dense_hash_map' type (involving several arrays, formed by 4 'uint' C++ built-in values, as the keys) with "<<ASSOCIATIONS_NUMBER<<" associations ... ";
 	cout.flush();
 	num=0;
 	map_arr_google.set_empty_key( vector<uint>() );
@@ -191,9 +194,9 @@ int main(void)
 	}
 	
 	/* Now, we export the result, then we study performance for the hashing map of the 'google::dense_hash_map' type (see the 'Mangrove_computeMean()' function). */
-	cout<<"ok [ in "<<num<<" ms ]"<<endl;
+	cout<<"ok [ in "<<num<<" ms ]."<<endl;
 	cout.flush();
-	cout<<"\tNavigating all associations, involving one array of 4 'uint' values (as the key), from the hashing map of the 'google::dense_hash_map' type (provided by the Google SparseHash Library) ... ";
+	cout<<"\tNavigating all associations, involving one array of 4 'uint' C++ built-in values (as the key), from the hashing map of the 'google::dense_hash_map' type (provided by the 'Google SparseHash Library') ... ";
 	cout.flush();
 	num=0;
 	for(unsigned int k=0;k<ASSOCIATIONS_NUMBER;k++)
@@ -211,12 +214,12 @@ int main(void)
 	}
 	
 	/* Now, we export the mean times for the hashing map of the 'google::dense_hash_map' type. */
-	cout<<"ok"<<endl<<"\tThe total time for this traversal: "<<num<<" ms"<<endl<<"\tThe mean time for accessing an association: "<<Mangrove_computeMean(num,ASSOCIATIONS_NUMBER)<<endl<<endl;
+	cout<<"ok"<<endl<<"\tThe total time for this traversal is "<<num<<" ms."<<endl<<"\tThe mean time for accessing an association is "<<Mangrove_computeMean(num,ASSOCIATIONS_NUMBER)<<" ms."<<endl<<endl;
 	cout.flush();
 	map_arr_google.clear();
 	
-	/* Now, we validate the efficiency of the hashing table of the 'google_sparse_hash_map' type, provided by the Google SparseHash Library. Here, the key is a generic array, formed by 4 'uint' values. */
-	cout<<"\tCreating a new hashing map of the 'google::sparse_hash_map' type (involving several arrays, formed by 4 'uint' values, as the keys) with "<<ASSOCIATIONS_NUMBER<<" associations ... ";
+	/* TASK #6 - validating the hashing maps of the 'google::sparse_hash_map' type, provided by the 'Google SparseHash Library'. Here, the key is a generic array, formed by 4 'uint' C++ built-in values. */
+	cout<<"\tCreating a new hashing map of the 'google::sparse_hash_map' type (involving several arrays, formed by 4 C++ built-in 'uint' values, as the keys) with "<<ASSOCIATIONS_NUMBER<<" associations ... ";
 	cout.flush();
 	num=0;
 	for(unsigned int k=0;k<ASSOCIATIONS_NUMBER;k++)
@@ -234,9 +237,9 @@ int main(void)
 	}
 	
 	/* Now, we export the result, then we study performance for the hashing map of the 'google::sparse_hash_map' type. */
-	cout<<"ok [ in "<<num<<" ms ]"<<endl;
+	cout<<"ok [ in "<<num<<" ms ]."<<endl;
 	cout.flush();
-	cout<<"\tNavigating all associations, involving one array of 4 'uint' values (as the key), in the hashing map of the 'google::sparse_hash_map' type (provided by the Google SparseHash Library) ... ";
+	cout<<"\tNavigating all associations, involving one array of 4 C++ built-in 'uint' values (as the key), in the hashing map of the 'google::sparse_hash_map' type (provided by the 'Google SparseHash Library') ... ";
 	cout.flush();
 	num=0;
 	for(unsigned int k=0;k<ASSOCIATIONS_NUMBER;k++)
@@ -254,15 +257,18 @@ int main(void)
 	}
 	
 	/* Now, we export the mean times for the hashing map of the 'google::dense_hash_map' type. */
-	cout<<"ok"<<endl<<"\tThe total time for this traversal: "<<num<<" ms"<<endl<<"\tThe mean time for accessing an association: "<<Mangrove_computeMean(num,ASSOCIATIONS_NUMBER)<<endl<<endl;
+	cout<<"ok"<<endl<<"\tThe total time for this traversal is "<<num<<" ms."<<endl<<"\tThe mean time for accessing an association is "<<Mangrove_computeMean(num,ASSOCIATIONS_NUMBER)<<"."<<endl<<endl;
 	cout.flush();
 	
-	/* Now, we can remove everything! */
+	/* TASK #7 - deallocating all hashing maps. Now, we can remove everything! */
+	cout<<"\tDeallocating all hashing maps in this tutorial ... ";
 	map_std.clear();
 	map_google.clear();
 	map_google_sparse.clear();
 	map_arr_std.clear();
 	map_arr_google.clear();
 	map_arr_google_sparse.clear();
+	cout<<"ok"<<endl<<endl;
+	cout.flush();
 	return EXIT_SUCCESS;
 }
