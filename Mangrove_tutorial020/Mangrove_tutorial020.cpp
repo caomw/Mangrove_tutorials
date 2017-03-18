@@ -18,7 +18,7 @@
  *
  * Mangrove_tutorial020.cpp - the 'Tutorial Example-020' for the 'Mangrove TDS Library 3.0'.
  *************************************************************************************************************************************************************************/
- 
+
 #include "Mangrove_Miscellanea.h"
 #include <cstdlib>
 #include <iostream>
@@ -26,48 +26,55 @@
 using namespace std;
 using namespace mangrove_tds;
 
-/// The <i>main function</i> for the <i>Mangrove_tutorial020</i> program.
+/// The <i>main function</i> for the <i>'Mangrove_tutorial020'</i> program.
 /**
  * \file Mangrove_tutorial020.cpp
  * \author <A href="http://davidcanino.github.io">David Canino</A> (e-mail: <A href="mailto:canino.david@gmail.com">David Canino</A>)
  */
 
-/// The <i>main function</i> for the <i>Mangrove_tutorial020</i> program.
+/// The <i>main function</i> for the <i>'Mangrove_tutorial020'</i> program.
 /**
  * \return <ul><li>the built-in <i>EXIT_SUCCESS</i> constant value (provided by the <i><A href="http://en.wikipedia.org/wiki/C%2B%2B_Standard_Library">Standard C++ Library</A></i>), if all is ok</li><li>the built-in <i>EXIT_FAILURE</i> constant value (provided by 
  * the <i><A href="http://en.wikipedia.org/wiki/C%2B%2B_Standard_Library">Standard C++ Library</A></i>), otherwise</li></ul>
- * \see mangrove_tds::Mangrove_exportCopyrightDisclaimer(), mangrove_tds::Mangrove_DataComparatorWithHashing
+ * \see mangrove_tds::Mangrove_exportCopyrightDisclaimer(), mangrove_tds::Mangrove_pause(), mangrove_tds::Mangrove_DataComparatorWithHashing
  */
 int main(void)
 {
 	deque< deque<uint> > d,d1;
-	deque< set<uint,Mangrove_DataComparatorWithHashing<uint>> > ds;
+	deque< set<uint, Mangrove_DataComparatorWithHashing<uint> > > ds;
+	ofstream out;
+	ifstream in;
 
-	/* Now, we validate several functions in the 'Mangrove_Miscellanea.h' file, focused for manipulating the nested deques, containing several deques of 'uint' values. 
-	 * Here, the 'uint' values are sorted in the set of interest by using their hashing values. Specifically, the hashing value of a given 'uint' value 'x' corresponds with 'x' itself. The actual comparison are performed by the 'Mangrove_DataComparatorWithHashing' 
-	 * template class. */
-	Mangrove_exportCopyrightDisclaimer("Mangrove_tutorial020");
-	cout<<"\tCreating the nested deque 'd', containing several deques of 'uint' values, ... ";
+	/* This is the 'Mangrove_tutorial020' tutorial, where the nested deques of several 'uint' C++ built-in values are validated. Here, the 'uint' C++ built-in values are sorted with respect to their hashing values (see the 'Mangrove_DataComparatorWithHashing'
+	 * template class). */
+	Mangrove_exportCopyrightDisclaimer ("The 'Mangrove_tutorial020' Tutorial");
+	cout.flush();
+	
+	/* TASK #1 - creating a new nested deque, containing several deques of 'uint' C++ built-in values. Then, converting this new deque to the corresponding nested deque of several sets. */
+	cout<<"\tCreating the nested deque 'd', containing several deques of 'uint' C++ built-in values, ... ";
 	d.push_back( deque<uint>() );
 	d.back().push_back(3);
 	d.push_back( deque<uint>() );
 	for(uint k=10;k>6;k--) d.back().push_back(2*k);
-	cout<<"ok"<<endl<<endl;
-	cout<<"\tThe total number of the 'uint' values in the nested deque 'd': "<<Mangrove_valuesNumber(d)<<endl;
-	cout.flush();
+	cout<<"ok"<<endl;
 	Mangrove_debug(d);
-	cout<<"\tConverting the nested deque 'd' into the nested deque 'ds', containing several sets of 'uint' values (sorted with respect to the order relation of their hashing values, see the 'Mangrove_DataComparatorWithHashing' template class), ... ";
+	cout<<"\tThe total number of the 'uint' C++ built-in values in the nested deque 'd' is "<<Mangrove_valuesNumber(d)<<"."<<endl<<endl;
+	cout.flush();
+	cout<<"\tConverting the nested deque 'd' into the nested deque 'ds', containing several sets of 'uint' C++ built-in values, ... ";
 	Mangrove_convert(d,ds);
 	cout<<"ok"<<endl<<endl;
-	cout<<"\tNOTE: in this implementation, the hashing value of a given 'uint' value 'x' corresponds with 'x' itself."<<endl<<endl;
-	cout<<"\tThe total number of the 'uint' values in the new nested deque 'ds': "<<Mangrove_valuesNumber(ds)<<endl;
-	cout.flush();
+	cout<<"\tIMPORTANT:\tthe 'uint' C++ built-in values in the sets of interest are sorted with respect to the order relation of their hashing values (see the 'Mangrove_DataComparatorWithHashing' template class)."<<endl<<"\t\t\tHere, the hashing value of an ";
+	cout<<"'uint' C++ built-in value coincides with its hashing value (by construction)."<<endl<<endl;
 	Mangrove_debug(ds);
-	cout<<"\tConverting the nested deque 'ds' into the corresponding nesting deque, containing several deques, ... ";
+	cout<<"\tThe total number of the 'uint' C++ built-in values in the new nested deque 'ds' is "<<Mangrove_valuesNumber(ds)<<"."<<endl<<endl;
+	cout<<"\tConverting the nested deque 'ds' back to the corresponding nesting deque, containing several deques, ... ";
 	Mangrove_convert(ds,d1);
-	cout<<"ok"<<endl<<endl;
-	cout<<"\tThe total number of the 'uint' values in the new nested deque: "<<Mangrove_valuesNumber(d1)<<endl;
-	Mangrove_debug(d1);
+	cout<<"ok"<<endl;
+	if(Mangrove_theSame(d,d1)) cout<<"\tThe content of the new nested deque coincides with the content of the original nested deque 'd'."<<endl<<endl;
+	else cout<<"\tThe content of the new nested deque does not coincide with the content of the original nested deque 'd'."<<endl<<endl;
+	cout.flush();
+	
+	/* TASK #2 - deallocating all nested deques in this tutorial. */
 	cout<<"\tDeallocating all nested deques of this tutorial ... ";
 	Mangrove_destroy(d);
 	Mangrove_destroy(d1);
