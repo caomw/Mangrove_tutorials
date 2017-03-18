@@ -160,32 +160,32 @@ int main(void)
 	else cout<<"\tThe conversion process is wrong, and the 'unsigned long integer (ulong)' C++ built-in values of interest do not coincide."<<endl<<endl;
 	cout.flush();
 	
-	/* TASK #9 - validating the mutual conversion between a string and a value, described by the C++ 'single floating-point (float)' built-in type. */
+	/* TASK #9 - validating the mutual conversion between a string and a value, described by the C++ 'single precision floating-point (float)' built-in type. */
 	str.clear();
 	float f=-1936.27;
-	cout<<"\tConverting the 'single floating-point (float)' C++ built-in value "<<f<<" as the corresponding string (satisfying the binary encoding) ... ";
+	cout<<"\tConverting the 'single precision floating-point (float)' C++ built-in value "<<f<<" as the corresponding string (satisfying the binary encoding) ... ";
 	str=Mangrove_float2string(f,true);
 	cout<<"ok"<<endl<<"\tThe resulting string of this conversion is '"<<str<<"'."<<endl;
-	cout<<"\tRetroprojecting the existing string onto the corresponding 'single floating-point (float)' C++ built-in value (satisfying the binary encoding) ... ";
+	cout<<"\tRetroprojecting the existing string onto the corresponding 'single precision floating-point (float)' C++ built-in value (satisfying the binary encoding) ... ";
 	cout.flush();
 	float f1=Mangrove_string2float(str,true);
-	cout<<"ok"<<endl<<"\tThe resulting 'single floating-point (float)' C++ built-in value is "<<f1<<"."<<endl;
-	if(f==f1) cout<<"\tThe conversion process is correct, and the 'single floating-point (float)' C++ built-in values of interest coincide."<<endl<<endl;
-	else cout<<"\tThe conversion process is wrong, and the 'single floating-point (float)' C++ built-in values of interest do not coincide."<<endl<<endl;
+	cout<<"ok"<<endl<<"\tThe resulting 'single precision floating-point (float)' C++ built-in value is "<<f1<<"."<<endl;
+	if(f==f1) cout<<"\tThe conversion process is correct, and the 'single precision floating-point (float)' C++ built-in values of interest coincide."<<endl<<endl;
+	else cout<<"\tThe conversion process is wrong, and the 'single precision floating-point (float)' C++ built-in values of interest do not coincide."<<endl<<endl;
 	cout.flush();
 	
-	/* TASK #10 - validating the mutual conversion between a string and a value, described by the C++ 'double floating-point (double)' built-in type. */
+	/* TASK #10 - validating the mutual conversion between a string and a value, described by the C++ 'double precision floating-point (double)' built-in type. */
 	str.clear();
 	double d=-1e+32;
-	cout<<"\tConverting the 'double floating-point (double)' C++ built-in value "<<d<<" as the corresponding string (satisfying the binary encoding) ... ";
+	cout<<"\tConverting the 'double precision floating-point (double)' C++ built-in value "<<d<<" as the corresponding string (satisfying the binary encoding) ... ";
 	str=Mangrove_double2string(d,true);
 	cout<<"ok"<<endl<<"\tThe resulting string of this conversion is '"<<str<<"'."<<endl;
-	cout<<"\tRetroprojecting the existing string onto the corresponding 'double floating-point (double)' C++ built-in value (satisfying the binary encoding) ... ";
+	cout<<"\tRetroprojecting the existing string onto the corresponding 'double precision floating-point (double)' C++ built-in value (satisfying the binary encoding) ... ";
 	cout.flush();
 	double d1=Mangrove_string2double(str,true);
-	cout<<"ok"<<endl<<"\tThe resulting 'double floating-point (double)' C++ built-in value is "<<d1<<"."<<endl;
-	if(d==d1) cout<<"\tThe conversion process is correct, and the 'double floating-point (double)' C++ built-in values of interest coincide."<<endl<<endl;
-	else cout<<"\tThe conversion process is wrong, and the 'double floating-point (double)' C++ built-in values of interest do not coincide."<<endl<<endl;
+	cout<<"ok"<<endl<<"\tThe resulting 'double precision floating-point (double)' C++ built-in value is "<<d1<<"."<<endl;
+	if(d==d1) cout<<"\tThe conversion process is correct, and the 'double precision floating-point (double)' C++ built-in values of interest coincide."<<endl<<endl;
+	else cout<<"\tThe conversion process is wrong, and the 'double precision floating-point (double)' C++ built-in values of interest do not coincide."<<endl<<endl;
 	cout.flush();
 	return EXIT_SUCCESS;
 }
