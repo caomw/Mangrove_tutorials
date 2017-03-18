@@ -88,14 +88,14 @@ int main(void)
 	cout<<"\tThe range for the values of the 'unsigned long integer (ulong)' type is: [ "<<std::numeric_limits<ulong>::min()<<" , "<<std::numeric_limits<ulong>::max()<<" ]."<<endl<<endl;
 	cout.flush();
 	
-	/* TASK #9 - extracting the ranges of the values, that can be represented by using the 'single floating-point (float)' C++ built-in type. */
-	cout<<"\tThe size of the 'single floating-point (float)' C++ built-in type is "<<sizeof(float)<<" bytes ("<<(sizeof(float)*8)<<" bits)."<<endl;
-	cout<<"\tThe range for the values of the 'single floating-point (float)' type is: [ "<<std::numeric_limits<float>::min()<<" , "<<std::numeric_limits<float>::max()<<" ]."<<endl<<endl;
+	/* TASK #9 - extracting the ranges of the values, that can be represented by using the 'single precision floating-point (float)' C++ built-in type. */
+	cout<<"\tThe size of the 'single precision floating-point (float)' C++ built-in type is "<<sizeof(float)<<" bytes ("<<(sizeof(float)*8)<<" bits)."<<endl;
+	cout<<"\tThe (positive) range for the normalized values of the 'single precision floating-point (float)' type is: [ "<<std::numeric_limits<float>::min()<<" , "<<std::numeric_limits<float>::max()<<" ]."<<endl<<endl;
 	cout.flush();
 	
-	/* TASK #10 - extracting the ranges of the values, that can be represented by using the 'double floating-point (double)' C++ built-in type. */
-	cout<<"\tThe size of the 'double floating-point (double)' C++ built-in type is "<<sizeof(double)<<" bytes ("<<(sizeof(double)*8)<<" bits)."<<endl;
-	cout<<"\tThe range for the values of the 'double floating-point (double)' type is: [ "<<std::numeric_limits<double>::min()<<" , "<<std::numeric_limits<double>::max()<<" ]."<<endl<<endl;
+	/* TASK #10 - extracting the ranges of the values, that can be represented by using the 'double precision floating-point (double)' C++ built-in type. */
+	cout<<"\tThe size of the 'double precision floating-point (double)' C++ built-in type is "<<sizeof(double)<<" bytes ("<<(sizeof(double)*8)<<" bits)."<<endl;
+	cout<<"\tThe (positive) range for the normalized values of the 'double precision floating-point (double)' type is: [ "<<std::numeric_limits<double>::min()<<" , "<<std::numeric_limits<double>::max()<<" ]."<<endl<<endl;
 	cout.flush();
 	return EXIT_SUCCESS;
 }
