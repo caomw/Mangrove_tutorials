@@ -36,7 +36,7 @@ using namespace mangrove_tds;
 /**
  * \return <ul><li>the built-in <i>EXIT_SUCCESS</i> constant value (provided by the <i><A href="http://en.wikipedia.org/wiki/C%2B%2B_Standard_Library">Standard C++ Library</A></i>), if all is ok</li><li>the built-in <i>EXIT_FAILURE</i> constant value (provided by 
  * the <i><A href="http://en.wikipedia.org/wiki/C%2B%2B_Standard_Library">Standard C++ Library</A></i>), otherwise</li></ul>
- * \see mangrove_tds::Mangrove_exportCopyrightDisclaimer()
+ * \see mangrove_tds::Mangrove_exportCopyrightDisclaimer(), mangrove_tds::Mangrove_pause();
  */
 int main(void)
 {
@@ -72,6 +72,7 @@ int main(void)
 	if(Mangrove_theSame(d1,origd)==true) cout<<"\tThe new deque 'd1' coincides with the original version of the deque 'd0' (with respect to the 'Mangrove_theSame()' template function)."<<endl<<endl;
 	else cout<<endl<<"\tThe new deque 'd1' does not coincide with the original version of the deque 'd0' (with respect to the 'Mangrove_theSame()' template function)."<<endl<<endl;
 	cout.flush();
+	Mangrove_pause();
 	
 	/* TASK #2 - validating the lists, containing several 'boolean (bool)' C++ built-in values. */
 	cout<<"\tCreating the new list 'l0' of several 'boolean (bool)' C++ built-in values ... ";
@@ -97,6 +98,7 @@ int main(void)
 	if(Mangrove_theSame(l1,origl)==true) cout<<"\tThe new list 'l1' coincides with the original version of the list 'l0' (with respect to the 'Mangrove_theSame()' template function)."<<endl<<endl;
 	else cout<<endl<<"\tThe new list 'l1' does not coincide with the original version of the list 'l0' (with respect to the 'Mangrove_theSame()' template function)."<<endl<<endl;
 	cout.flush();
+	Mangrove_pause();
 	
 	/* TASK #3 - validating the arrays, containing several 'boolean (bool)' C++ built-in values. */
 	cout<<"\tCreating the new array 'v0' of several 'boolean (bool)' C++ built-in values ... ";
