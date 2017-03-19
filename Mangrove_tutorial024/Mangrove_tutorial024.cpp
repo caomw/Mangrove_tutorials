@@ -26,7 +26,7 @@
 using namespace std;
 using namespace mangrove_tds;
 
-/// The <i>main function</i> for the <i>Mangrove_tutorial024</i> program.
+/// The <i>main function</i> for the <i>'Mangrove_tutorial024'</i> program.
 /**
  * \file Mangrove_tutorial024.cpp
  * \author <A href="http://davidcanino.github.io">David Canino</A> (e-mail: <A href="mailto:canino.david@gmail.com">David Canino</A>)
