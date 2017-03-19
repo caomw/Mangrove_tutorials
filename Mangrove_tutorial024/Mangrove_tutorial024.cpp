@@ -93,7 +93,7 @@ int main(void)
 		cout.flush();
 	}
 	
-	/* Now, we export the 'debug' representation of all locations in the 'tartaglia_triangles' deque on the standard output stream. */
+	/* Now, we export the 'debug' representation of all locations in the 'tartaglia_triangles' deque on the standard output stream. Then, we try to to reconstruct these locations after exporting their 'compact' representation on a given file. */
 	Mangrove_debugTartagliaTriangles();
 	pos=2;
 	cout<<"\tDeallocating the location #"<<pos<<" in the 'tartaglia_triangles' deque ... ";
@@ -118,6 +118,9 @@ int main(void)
 	cout<<"\tRemoving the 'compact_tartaglia_triangles.txt' file ... ";
 	Mangrove_removeFile("compact_tartaglia_triangles.txt");
 	cout<<"ok"<<endl<<endl;
+	cout.flush();
+	
+	/* TASK #3 - deallocating all Tartaglia's Triangles in the system. */
 	cout<<"\tDeallocating all Tartaglia's Triangles in the 'tartaglia_triangles' deque ... ";
 	Mangrove_destroyLocations4TartagliaTriangles();
 	cout<<"ok"<<endl;
