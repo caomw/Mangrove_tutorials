@@ -48,6 +48,7 @@ int main(void)
 	/* This is the 'Mangrove_tutorial022' tutorial, where the nested arrays of several 'uint' C++ built-in values are validated. Here, the 'uint' C++ built-in values are sorted with respect to their hashing values (see the 'Mangrove_DataComparatorWithHashing'
 	 * template class). */
 	Mangrove_exportCopyrightDisclaimer ("The 'Mangrove_tutorial022' Tutorial");
+	cout<<"\tIMPORTANT:\tthe 'uint' C++ built-in values in the sets of interest are sorted with respect to the order relation of their hashing values (see the 'Mangrove_DataComparatorWithHashing' template class)."<<endl<<endl;
 	cout.flush();
 	
 	/* TASK #1 - creating a new nested array, containing several arrays of 'uint' C++ built-in values. Then, converting this new array to the corresponding nested array of several sets. */
@@ -60,9 +61,7 @@ int main(void)
 	cout.flush();
 	cout<<"\tConverting the nested array 'a' into the nested array 'as', containing several sets of 'uint' C++ built-in values, ... ";
 	Mangrove_convert(a,as);
-	cout<<"ok"<<endl<<endl;
-	cout<<"\tIMPORTANT:\tthe 'uint' C++ built-in values in the sets of interest are sorted with respect to the order relation of their hashing values (see the 'Mangrove_DataComparatorWithHashing' template class)."<<endl<<"\t\t\tHere, the hashing value of an ";
-	cout<<"'uint' C++ built-in value coincides with its hashing value (by construction)."<<endl<<endl;
+	cout<<"ok"<<endl;
 	Mangrove_debug(as);
 	cout<<"\tThe total number of the 'uint' C++ built-in values in the new nested array 'as' is "<<Mangrove_valuesNumber(as)<<"."<<endl<<endl;
 	cout<<"\tConverting the nested array 'as' back to the corresponding nesting array, containing several arrays, ... ";

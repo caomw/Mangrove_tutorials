@@ -48,6 +48,8 @@ int main(void)
 	/* This is the 'Mangrove_tutorial018' tutorial, where the nested lists of several 'uint' C++ built-in values are validated. */
 	Mangrove_exportCopyrightDisclaimer ("The 'Mangrove_tutorial018' Tutorial");
 	cout.flush();
+	cout<<"\tIMPORTANT:\tthe 'uint' C++ built-in values in the sets of interest are sorted with respect to the '<' and the '==' comparison operators."<<endl<<endl;
+	cout.flush();
 	
 	/* TASK #1 - creating a new nested list, containing several lists of 'uint' C++ built-in values. */
 	cout<<"\tCreating the nested list 'l', containing several lists of 'uint' C++ built-in values, ... ";
@@ -80,9 +82,7 @@ int main(void)
 	/* TASK #2 - converting the nested list 'l' to the corresponding nested list of several sets. */
 	cout<<"\tConverting the nested list 'l' into the nested list 'ls', containing several sets of 'uint' C++ built-in values, ... ";
 	Mangrove_convert(l,ls);
-	cout<<"ok"<<endl<<endl;
-	cout<<"\tIMPORTANT:\tthe 'uint' C++ built-in values in the sets of interest are sorted with respect to the '<' and the '==' comparison operators."<<endl<<endl;
-	cout.flush();
+	cout<<"ok"<<endl;
 	Mangrove_debug(ls);
 	cout<<"\tThe total number of the 'uint' C++ built-in values in the new nested list 'ls' is "<<Mangrove_valuesNumber(ls)<<"."<<endl<<endl;
 	cout<<"\tConverting the nested list 'ls' back to the corresponding nesting list, containing several lists, ... ";

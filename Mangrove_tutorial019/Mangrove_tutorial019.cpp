@@ -47,6 +47,7 @@ int main(void)
 
 	/* This is the 'Mangrove_tutorial019' tutorial, where the nested arrays of several 'uint' C++ built-in values are validated. */
 	Mangrove_exportCopyrightDisclaimer ("The 'Mangrove_tutorial019' Tutorial");
+	cout<<"\tIMPORTANT:\tthe 'uint' C++ built-in values in the sets of interest are sorted with respect to the '<' and the '==' comparison operators."<<endl<<endl;
 	cout.flush();
 	
 	/* TASK #1 - creating a new nested array, containing several arrays of 'uint' C++ built-in values. */
@@ -79,9 +80,7 @@ int main(void)
 	/* TASK #2 - converting the nested array 'a' to the corresponding nested array of several sets. */
 	cout<<"\tConverting the nested array 'a' into the nested array 'as', containing several sets of 'uint' C++ built-in values, ... ";
 	Mangrove_convert(a,as);
-	cout<<"ok"<<endl<<endl;
-	cout<<"\tIMPORTANT:\tthe 'uint' C++ built-in values in the sets of interest are sorted with respect to the '<' and the '==' comparison operators."<<endl<<endl;
-	cout.flush();
+	cout<<"ok"<<endl;
 	Mangrove_debug(as);
 	cout<<"\tThe total number of the 'uint' C++ built-in values in the new nested array 'as' is "<<Mangrove_valuesNumber(as)<<"."<<endl<<endl;
 	cout<<"\tConverting the nested array 'as' back to the corresponding nesting array, containing several arrays, ... ";

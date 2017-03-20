@@ -16,7 +16,7 @@
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License (http://www.gnu.org/licenses/gpl.txt) for
  * more details.
  *
- * Mangrove_tutoriav012.cpp - the 'Tutorial Example-012' for the 'Mangrove TDS Library 3.0'.
+ * Mangrove_tutorial012.cpp - the 'Tutorial Example-012' for the 'Mangrove TDS Library 3.0'.
  *************************************************************************************************************************************************************************/
  
 #include "Mangrove_Miscellanea.h"
@@ -26,13 +26,13 @@
 using namespace std;
 using namespace mangrove_tds;
 
-/// The <i>main function</i> for the <i>'Mangrove_tutoriav012'</i> program.
+/// The <i>main function</i> for the <i>'Mangrove_tutorial012'</i> program.
 /**
- * \file Mangrove_tutoriav012.cpp
+ * \file Mangrove_tutorial012.cpp
  * \author <A href="http://davidcanino.github.io">David Canino</A> (e-mail: <A href="mailto:canino.david@gmail.com">David Canino</A>)
  */
 
-/// The <i>main function</i> for the <i>'Mangrove_tutoriav012'</i> program.
+/// The <i>main function</i> for the <i>'Mangrove_tutorial012'</i> program.
 /**
  * \return <ul><li>the built-in <i>EXIT_SUCCESS</i> constant value (provided by the <i><A href="http://en.wikipedia.org/wiki/C%2B%2B_Standard_Library">Standard C++ Library</A></i>), if all is ok</li><li>the built-in <i>EXIT_FAILURE</i> constant value (provided by 
  * the <i><A href="http://en.wikipedia.org/wiki/C%2B%2B_Standard_Library">Standard C++ Library</A></i>), otherwise</li></ul>
@@ -43,8 +43,8 @@ int main(void)
 	ofstream out;
 	ifstream in;
 
-	/* This is the 'Mangrove_tutoriav012' tutorial, where the arrays, containing several 'uint' C++ built-in values, are validated. */
-	Mangrove_exportCopyrightDisclaimer ("The 'Mangrove_tutoriav012' Tutorial");
+	/* This is the 'Mangrove_tutorial012' tutorial, where the arrays, containing several 'uint' C++ built-in values, are validated. */
+	Mangrove_exportCopyrightDisclaimer ("The 'Mangrove_tutorial012' Tutorial");
 	cout.flush();
 	
 	/* TASK #1 - creating a new array 'v0' of several 'uint' C++ built-in values, and validating functions for exporting its 'debug', 'hybrid', and compact representations. */

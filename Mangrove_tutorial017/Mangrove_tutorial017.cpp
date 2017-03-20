@@ -48,6 +48,8 @@ int main(void)
 	/* This is the 'Mangrove_tutorial017' tutorial, where the nested deques of several 'uint' C++ built-in values are validated. */
 	Mangrove_exportCopyrightDisclaimer ("The 'Mangrove_tutorial017' Tutorial");
 	cout.flush();
+	cout<<"\tIMPORTANT:\tthe 'uint' C++ built-in values in the sets of interest are sorted with respect to the '<' and the '==' comparison operators."<<endl<<endl;
+	cout.flush();
 	
 	/* TASK #1 - creating a new nested deque, containing several deques of 'uint' C++ built-in values. */
 	cout<<"\tCreating the nested deque 'd', containing several deques of 'uint' C++ built-in values, ... ";
@@ -81,9 +83,7 @@ int main(void)
 	/* TASK #2 - converting the nested deque 'd' to the corresponding nested deque of several sets. */
 	cout<<"\tConverting the nested deque 'd' into the nested deque 'ds', containing several sets of 'uint' C++ built-in values, ... ";
 	Mangrove_convert(d,ds);
-	cout<<"ok"<<endl<<endl;
-	cout<<"\tIMPORTANT:\tthe 'uint' C++ built-in values in the sets of interest are sorted with respect to the '<' and the '==' comparison operators."<<endl<<endl;
-	cout.flush();
+	cout<<"ok"<<endl;
 	Mangrove_debug(ds);
 	cout<<"\tThe total number of the 'uint' C++ built-in values in the new nested deque 'ds' is "<<Mangrove_valuesNumber(ds)<<"."<<endl<<endl;
 	cout<<"\tConverting the nested deque 'ds' back to the corresponding nesting deque, containing several deques, ... ";

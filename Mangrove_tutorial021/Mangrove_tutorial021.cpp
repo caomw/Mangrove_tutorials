@@ -48,6 +48,7 @@ int main(void)
 	/* This is the 'Mangrove_tutorial021' tutorial, where the nested lists of several 'uint' C++ built-in values are validated. Here, the 'uint' C++ built-in values are sorted with respect to their hashing values (see the 'Mangrove_DataComparatorWithHashing'
 	 * template class). */
 	Mangrove_exportCopyrightDisclaimer ("The 'Mangrove_tutorial021' Tutorial");
+	cout<<"\tIMPORTANT:\tthe 'uint' C++ built-in values in the sets of interest are sorted with respect to the order relation of their hashing values (see the 'Mangrove_DataComparatorWithHashing' template class)."<<endl<<endl;
 	cout.flush();
 	
 	/* TASK #1 - creating a new nested list, containing several lists of 'uint' C++ built-in values. Then, converting this new list to the corresponding nested list of several sets. */
@@ -61,9 +62,7 @@ int main(void)
 	cout.flush();
 	cout<<"\tConverting the nested list 'l' into the nested list 'ls', containing several sets of 'uint' C++ built-in values, ... ";
 	Mangrove_convert(l,ls);
-	cout<<"ok"<<endl<<endl;
-	cout<<"\tIMPORTANT:\tthe 'uint' C++ built-in values in the sets of interest are sorted with respect to the order relation of their hashing values (see the 'Mangrove_DataComparatorWithHashing' template class)."<<endl<<"\t\t\tHere, the hashing value of an ";
-	cout<<"'uint' C++ built-in value coincides with its hashing value (by construction)."<<endl<<endl;
+	cout<<"ok"<<endl;
 	Mangrove_debug(ls);
 	cout<<"\tThe total number of the 'uint' C++ built-in values in the new nested list 'ls' is "<<Mangrove_valuesNumber(ls)<<"."<<endl<<endl;
 	cout<<"\tConverting the nested list 'ls' back to the corresponding nesting list, containing several lists, ... ";

@@ -48,6 +48,7 @@ int main(void)
 	/* This is the 'Mangrove_tutorial020' tutorial, where the nested deques of several 'uint' C++ built-in values are validated. Here, the 'uint' C++ built-in values are sorted with respect to their hashing values (see the 'Mangrove_DataComparatorWithHashing'
 	 * template class). */
 	Mangrove_exportCopyrightDisclaimer ("The 'Mangrove_tutorial020' Tutorial");
+	cout<<"\tIMPORTANT:\tthe 'uint' C++ built-in values in the sets of interest are sorted with respect to the order relation of their hashing values (see the 'Mangrove_DataComparatorWithHashing' template class)."<<endl<<endl;
 	cout.flush();
 	
 	/* TASK #1 - creating a new nested deque, containing several deques of 'uint' C++ built-in values. Then, converting this new deque to the corresponding nested deque of several sets. */
@@ -62,9 +63,7 @@ int main(void)
 	cout.flush();
 	cout<<"\tConverting the nested deque 'd' into the nested deque 'ds', containing several sets of 'uint' C++ built-in values, ... ";
 	Mangrove_convert(d,ds);
-	cout<<"ok"<<endl<<endl;
-	cout<<"\tIMPORTANT:\tthe 'uint' C++ built-in values in the sets of interest are sorted with respect to the order relation of their hashing values (see the 'Mangrove_DataComparatorWithHashing' template class)."<<endl<<"\t\t\tHere, the hashing value of an ";
-	cout<<"'uint' C++ built-in value coincides with its hashing value (by construction)."<<endl<<endl;
+	cout<<"ok"<<endl;
 	Mangrove_debug(ds);
 	cout<<"\tThe total number of the 'uint' C++ built-in values in the new nested deque 'ds' is "<<Mangrove_valuesNumber(ds)<<"."<<endl<<endl;
 	cout<<"\tConverting the nested deque 'ds' back to the corresponding nesting deque, containing several deques, ... ";

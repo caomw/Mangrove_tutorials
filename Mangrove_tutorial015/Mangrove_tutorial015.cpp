@@ -47,9 +47,9 @@ int main(void)
 	/* This is the 'Mangrove_tutorial015' tutorial, where the sets, containing several 'int' C++ built-in values, are validated. */
 	Mangrove_exportCopyrightDisclaimer ("The 'Mangrove_tutorial015' Tutorial");
 	cout.flush();
+	cout<<"\tIMPORTANT:\tthe 'int' C++ built-in values in the sets of interest are sorted with respect to the '<' and the '==' comparison operators."<<endl<<endl;
 
 	/* TASK #1 - creating a new set 's0' of several 'int' C++ built-in values, and validating functions for exporting its 'debug', 'hybrid', and compact representations. */
-	cout<<"\tIMPORTANT:\tthe 'int' C++ built-in values in the sets of interest are sorted with respect to the '<' and the '==' comparison operators."<<endl<<endl;
 	cout<<"\tCreating the new set 's0' of several 'int' C++ built-in values ... ";
 	set<int> s0={ 3,0,54,11, 0, -5, -2 },s1,s01;
 	cout<<"ok"<<endl;
