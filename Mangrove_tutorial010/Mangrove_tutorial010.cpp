@@ -43,12 +43,12 @@ int main(void)
 	ofstream out;
 	ifstream in;
 
-	/* This is the 'Mangrove_tutorial010' tutorial, where the deques, containing several 'uint' C++ built-in values, are validated. */
+	/* This is the 'Mangrove_tutorial010' tutorial, where the deques, containing several 'unsigned int (uint)' C++ built-in values, are validated. */
 	Mangrove_exportCopyrightDisclaimer ("The 'Mangrove_tutorial010' Tutorial");
 	cout.flush();
 	
-	/* TASK #1 - creating a new deque 'd0' of several 'uint' C++ built-in values, and validating functions for exporting its 'debug', 'hybrid', and compact representations. */
-	cout<<"\tCreating the new deque 'd0' of several 'uint' C++ built-in values ... ";
+	/* TASK #1 - creating a new deque 'd0' of several 'unsigned int (uint)' C++ built-in values, and validating functions for exporting its 'debug', 'hybrid', and compact representations. */
+	cout<<"\tCreating the new deque 'd0' of several 'unsigned int (uint)' C++ built-in values ... ";
 	deque<uint> d0={ 3,0,54,11, 0 },d1,d01;
 	cout<<"ok"<<endl;
 	Mangrove_debug(d0);
@@ -66,8 +66,8 @@ int main(void)
 	in.close();
 	cout<<"ok"<<endl;
 	Mangrove_debug(d1);
-	if(Mangrove_theSame(d0,d1)) cout<<"\tThe 'uint' C++ built-in values in the reconstructed deque coincide position by position with the 'uint' C++ built-in values in the deque 'd0'."<<endl<<endl;
-	else cout<<"\tThe 'uint' C++ built-in values in the reconstructed deque do not coincide position by position with the 'uint' C++ built-in values in the deque 'd0'."<<endl<<endl;
+	if(Mangrove_theSame(d0,d1)) cout<<"\tThe 'unsigned int (uint)' C++ built-in values in the reconstructed deque coincide position by position with the 'unsigned int (uint)' C++ built-in values in the deque 'd0'."<<endl<<endl;
+	else cout<<"\tThe 'unsigned int (uint)' C++ built-in values in the reconstructed deque do not coincide position by position with the 'unsigned int (uint)' C++ built-in values in the deque 'd0'."<<endl<<endl;
 	cout<<"\tRemoving the 'hybrid_deque.txt' file ... ";
 	Mangrove_removeFile("hybrid_deque.txt");
 	cout<<"ok"<<endl<<endl;
@@ -84,8 +84,8 @@ int main(void)
 	in.close();
 	cout<<"ok"<<endl;
 	Mangrove_debug(d1);
-	if(Mangrove_theSame(d0,d1)) cout<<"\tThe 'uint' C++ built-in values in the reconstructed deque coincide position by position with the 'uint' C++ built-in values in the deque 'd0'."<<endl<<endl;
-	else cout<<"\tThe 'uint' C++ built-in values in the reconstructed deque do not coincide position by position with the 'uint' C++ built-in values in the deque 'd0'."<<endl<<endl;
+	if(Mangrove_theSame(d0,d1)) cout<<"\tThe 'unsigned int (uint)' C++ built-in values in the reconstructed deque coincide position by position with the 'unsigned int (uint)' C++ built-in values in the deque 'd0'."<<endl<<endl;
+	else cout<<"\tThe 'unsigned int (uint)' C++ built-in values in the reconstructed deque do not coincide position by position with the 'unsigned int (uint)' C++ built-in values in the deque 'd0'."<<endl<<endl;
 	cout<<"\tRemoving the 'compact_deque.txt' file ... ";
 	Mangrove_removeFile("compact_deque.txt");
 	cout<<"ok"<<endl<<endl;
@@ -93,12 +93,12 @@ int main(void)
 	d1.clear();
 	Mangrove_pause();
 	
-	/* TASK #2 - validating the 'Mangrove_getPosition()' and the  'Mangrove_findProjection()' template functions for the deques of several template values (specialized for the 'uint' C++ built-in values, in this case). */
+	/* TASK #2 - validating the 'Mangrove_getPosition()' and the  'Mangrove_findProjection()' template functions for the deques of several template values (specialized for the 'unsigned int (uint)' C++ built-in values, in this case). */
 	uint p;
-	if(Mangrove_getPosition(d0,(uint)54,p)==true) { cout<<"\tThe deque 'd0' contains the 'uint' C++ built-in value '54' in position "<<p<<"."<<endl; }
-	else { cout<<"\tThe deque 'd0' does not contain the 'uint' C++ built-in value '54'."<<endl; }
-	if(Mangrove_getPosition(d0,(uint)58,p)==true) { cout<<"\tThe deque 'd0' contains the 'uint' C++ built-in value '58' in position "<<p<<"."<<endl<<endl; }
-	else { cout<<"\tThe deque 'd0' does not contain the 'uint' C++ built-in value '58'."<<endl<<endl; }
+	if(Mangrove_getPosition(d0,(uint)54,p)==true) { cout<<"\tThe deque 'd0' contains the 'unsigned int (uint)' C++ built-in value '54' in position "<<p<<"."<<endl; }
+	else { cout<<"\tThe deque 'd0' does not contain the 'unsigned int (uint)' C++ built-in value '54'."<<endl; }
+	if(Mangrove_getPosition(d0,(uint)58,p)==true) { cout<<"\tThe deque 'd0' contains the 'unsigned int (uint)' C++ built-in value '58' in position "<<p<<"."<<endl<<endl; }
+	else { cout<<"\tThe deque 'd0' does not contain the 'unsigned int (uint)' C++ built-in value '58'."<<endl<<endl; }
 	cout.flush();
 	cout<<"\tRetrieving the canonical projection of the deque 'd0' with respect to the position 0 ... ";
 	Mangrove_findProjection(0,d0,d1);
@@ -106,19 +106,19 @@ int main(void)
 	cout<<"\tThe resulting canonical projection of interest is: ";
 	Mangrove_exportHybrid(d1);
 	cout.flush();
-	if(Mangrove_includes(d0,d1)==true) cout<<"\tThe deque 'd0' contains all 'uint' C++ built-in values in the canonical projection of interest in the same order as they appear (but not forming necessarily a block of consecutive values)."<<endl<<endl;
-	else cout<<"\tThe deque 'd0' does not contain all 'uint' C++ built-in values in the canonical projection of interest in the same order as they appear (but not forming necessarily a block of consecutive values)."<<endl<<endl;
+	if(Mangrove_includes(d0,d1)==true) cout<<"\tThe deque 'd0' contains all 'unsigned int (uint)' C++ built-in values in the canonical projection of interest in the same order as they appear (but not forming necessarily a block of consecutive values)."<<endl<<endl;
+	else cout<<"\tThe deque 'd0' does not contain all 'unsigned int (uint)' C++ built-in values in the canonical projection of interest in the same order as they appear (but not forming necessarily a block of consecutive values)."<<endl<<endl;
 	cout<<"\tRetrieving the canonical projection of the deque 'd0' with respect to the position 4 ... ";
 	Mangrove_findProjection(4,d0,d1);
 	cout<<"ok"<<endl;
 	cout<<"\tThe resulting canonical projection of interest is: ";
 	Mangrove_exportHybrid(d1);
-	if(Mangrove_includes(d0,d1)==true) cout<<"\tThe deque 'd0' contains all 'uint' C++ built-in values in the canonical projection of interest in the same order as they appear (but not forming necessarily a block of consecutive values)."<<endl<<endl;
-	else cout<<"\tThe deque 'd0' does not contain all 'uint' C++ built-in values in the canonical projection of interest in the same order as they appear (but not forming necessarily a block of consecutive values)."<<endl<<endl;
-	cout<<"\tIMPORTANT:\t\tthe operations (just performed) are executed without sorting the values of interest, and may produce wrong results."<<endl<<endl<<"\tSorting the 'uint' C++ built-in values in the deque 'd0' ... ";
+	if(Mangrove_includes(d0,d1)==true) cout<<"\tThe deque 'd0' contains all 'unsigned int (uint)' C++ built-in values in the canonical projection of interest in the same order as they appear (but not forming necessarily a block of consecutive values)."<<endl<<endl;
+	else cout<<"\tThe deque 'd0' does not contain all 'unsigned int (uint)' C++ built-in values in the canonical projection of interest in the same order as they appear (but not forming necessarily a block of consecutive values)."<<endl<<endl;
+	cout<<"\tIMPORTANT:\t\tthe operations (just performed) are executed without sorting the values of interest, and may produce wrong results."<<endl<<endl<<"\tSorting the 'unsigned int (uint)' C++ built-in values in the deque 'd0' ... ";
 	sort(d0.begin(),d0.end());
 	cout<<"ok"<<endl;
-	cout<<"\tThe new deque 'd0' contains the following 'uint' C++ built-in values: ";
+	cout<<"\tThe new deque 'd0' contains the following 'unsigned int (uint)' C++ built-in values: ";
 	Mangrove_exportHybrid(d0);
 	cout<<"\tRetrieving the canonical projection of the deque 'd0' with respect to the position 0 ... ";
 	Mangrove_findProjection(0,d0,d1);
@@ -126,50 +126,52 @@ int main(void)
 	cout<<"\tThe resulting canonical projection of interest is: ";
 	Mangrove_exportHybrid(d1);
 	cout.flush();
-	if(Mangrove_includes(d0,d1)==true) cout<<"\tThe deque 'd0' contains all 'uint' C++ built-in values in the canonical projection of interest in the same order as they appear (but not forming necessarily a block of consecutive values)."<<endl<<endl;
-	else cout<<"\tThe deque 'd0' does not contain all 'uint' C++ built-in values in the canonical projection of interest in the same order as they appear (but not forming necessarily a block of consecutive values)."<<endl<<endl;
+	if(Mangrove_includes(d0,d1)==true) cout<<"\tThe deque 'd0' contains all 'unsigned int (uint)' C++ built-in values in the canonical projection of interest in the same order as they appear (but not forming necessarily a block of consecutive values)."<<endl<<endl;
+	else cout<<"\tThe deque 'd0' does not contain all 'unsigned int (uint)' C++ built-in values in the canonical projection of interest in the same order as they appear (but not forming necessarily a block of consecutive values)."<<endl<<endl;
 	cout<<"\tRetrieving the canonical projection of the deque 'd0' with respect to the position 4 ... ";
 	Mangrove_findProjection(4,d0,d1);
 	cout<<"ok"<<endl;
 	cout<<"\tThe resulting canonical projection of interest is: ";
 	Mangrove_exportHybrid(d1);
-	if(Mangrove_includes(d0,d1)==true) cout<<"\tThe deque 'd0' contains all 'uint' C++ built-in values in the canonical projection of interest in the same order as they appear (but not forming necessarily a block of consecutive values)."<<endl<<endl;
-	else cout<<"\tThe deque 'd0' does not contain all 'uint' C++ built-in values in the canonical projection of interest in the same order as they appear (but not forming necessarily a block of consecutive values)."<<endl<<endl;
+	if(Mangrove_includes(d0,d1)==true) cout<<"\tThe deque 'd0' contains all 'unsigned int (uint)' C++ built-in values in the canonical projection of interest in the same order as they appear (but not forming necessarily a block of consecutive values)."<<endl<<endl;
+	else cout<<"\tThe deque 'd0' does not contain all 'unsigned int (uint)' C++ built-in values in the canonical projection of interest in the same order as they appear (but not forming necessarily a block of consecutive values)."<<endl<<endl;
 	cout.flush();
 	d1.clear();
 	Mangrove_pause();
 	
 	/* TASK #3 - creating a new deque 'd1' to be compared with the existing deque 'd0'. */
-	cout<<"\tThe deque 'd0' contains the following 'uint' C++ built-in values: ";
+	cout<<"\tThe deque 'd0' contains the following 'unsigned int (uint)' C++ built-in values: ";
 	Mangrove_exportHybrid(d0);
-	cout<<"\tCreating the new deque 'd1' of several 'uint' C++ built-in values ... ";
+	cout<<"\tCreating the new deque 'd1' of several 'unsigned int (uint)' C++ built-in values ... ";
 	d1={1,5,4,11,54};
 	cout<<"ok"<<endl;
 	Mangrove_debug(d1);
-	if(d0<d1) { cout<<"\tThe 'uint' C++ built-in values in the deque 'd0' are 'strictly less than' the 'uint' C++ built-in values in the deque 'd1' (with respect to the '<' operator)."<<endl; }
-	else { cout<<"\tThe 'uint' C++ built-in values in the deque 'd0' are not 'strictly less than' the 'uint' C++ built-in values in the deque 'd1' (with respect to the '<' operator)."<<endl; }
-	if( Mangrove_DataComparator<uint>()(d0,d1) ) { cout<<"\tThe 'uint' C++ built-in values in the deque 'd0' are 'strictly less than' the 'uint' C++ built-in values in the deque 'd1' (with respect to the 'Mangrove_DataComparator' template class)."<<endl; }
-	else { cout<<"\tThe 'uint' C++ built-in values in the deque 'd0' are not 'strictly less than' the 'uint' C++ built-in values in the deque 'd1' (with respect to the 'Mangrove_DataComparator' template class)."<<endl; }
-	if(d1<d0) { cout<<"\tThe 'uint' C++ built-in values in the deque 'd1' are 'strictly less than' the 'uint' C++ built-in values in the deque 'd0' (with respect to the '<' operator)."<<endl; }
-	else { cout<<"\tThe 'uint' C++ built-in values in the deque 'd1' are not 'strictly less than' the 'uint' C++ built-in values in the deque 'd0' (with respect to the '<' operator)."<<endl; }
-	if( Mangrove_DataComparator<uint>()(d1,d0) ) { cout<<"\tThe 'uint' C++ built-in values in the deque 'd1' are 'strictly less than' the 'uint' C++ built-in values in the deque 'd0' (with respect to the 'Mangrove_DataComparator' template class)."<<endl; }
-	else { cout<<"\tThe 'uint' C++ built-in values in the deque 'd1' are not 'strictly less than' the 'uint' C++ built-in values in the deque 'd0' (with respect to the 'Mangrove_DataComparator' template class)."<<endl; }
+	if(d0<d1) { cout<<"\tThe 'unsigned int (uint)' C++ built-in values in the deque 'd0' are 'strictly less than' the 'unsigned int (uint)' C++ built-in values in the deque 'd1' (with respect to the '<' operator)."<<endl; }
+	else { cout<<"\tThe 'unsigned int (uint)' C++ built-in values in the deque 'd0' are not 'strictly less than' the 'unsigned int (uint)' C++ built-in values in the deque 'd1' (with respect to the '<' operator)."<<endl; }
+	if( Mangrove_DataComparator<uint>()(d0,d1) ) 
+		{ cout<<"\tThe 'unsigned int (uint)' C++ built-in values in the deque 'd0' are 'strictly less than' the 'unsigned int (uint)' C++ built-in values in the deque 'd1' (with respect to the 'Mangrove_DataComparator' template class)."<<endl; }
+	else { cout<<"\tThe 'unsigned int (uint)' C++ built-in values in the deque 'd0' are not 'strictly less than' the 'unsigned int (uint)' C++ built-in values in the deque 'd1' (with respect to the 'Mangrove_DataComparator' template class)."<<endl; }
+	if(d1<d0) { cout<<"\tThe 'unsigned int (uint)' C++ built-in values in the deque 'd1' are 'strictly less than' the 'unsigned int (uint)' C++ built-in values in the deque 'd0' (with respect to the '<' operator)."<<endl; }
+	else { cout<<"\tThe 'unsigned int (uint)' C++ built-in values in the deque 'd1' are not 'strictly less than' the 'unsigned int (uint)' C++ built-in values in the deque 'd0' (with respect to the '<' operator)."<<endl; }
+	if( Mangrove_DataComparator<uint>()(d1,d0) ) 
+		{ cout<<"\tThe 'unsigned int (uint)' C++ built-in values in the deque 'd1' are 'strictly less than' the 'unsigned int (uint)' C++ built-in values in the deque 'd0' (with respect to the 'Mangrove_DataComparator' template class)."<<endl; }
+	else { cout<<"\tThe 'unsigned int (uint)' C++ built-in values in the deque 'd1' are not 'strictly less than' the 'unsigned int (uint)' C++ built-in values in the deque 'd0' (with respect to the 'Mangrove_DataComparator' template class)."<<endl; }
 	cout<<endl<<"\tThe hashing value of the deque 'd0' (see the 'boost::hash_value()' template function) is "<<boost::hash_value(d0)<<"."<<endl;
 	cout<<"\tThe hashing value of the deque 'd1' (see the 'boost::hash_value()' template function) is "<<boost::hash_value(d1)<<"."<<endl;
 	if( Mangrove_DataComparatorWithHashing<uint>()(d0,d1) ) 
-		{ cout<<"\tThe 'uint' C++ built-in values in the deque 'd0' are 'strictly less than' the 'uint' C++ built-in values in the deque 'd1' (with respect to the 'Mangrove_DataComparatorWithHashing' template class)."<<endl; }
-	else { cout<<"\tThe 'uint' C++ built-in values in the deque 'd0' are not 'strictly less than' the 'uint' C++ built-in values in the deque 'd1' (with respect to the 'Mangrove_DataComparatorWithHashing' template class)."<<endl; }
+		{ cout<<"\tThe 'unsigned int (uint)' C++ built-in values in the deque 'd0' are 'strictly less than' the 'unsigned int (uint)' C++ built-in values in the deque 'd1' (with respect to the 'Mangrove_DataComparatorWithHashing' template class)."<<endl; }
+	else { cout<<"\tThe 'unsigned int (uint)' C++ built-in values in the deque 'd0' are not 'strictly less than' the 'unsigned int (uint)' C++ built-in values in the deque 'd1' (with respect to the 'Mangrove_DataComparatorWithHashing' template class)."<<endl; }
 	if( Mangrove_DataComparatorWithHashing<uint>()(d1,d0) ) 
-		{ cout<<"\tThe 'uint' C++ built-in values in the deque 'd1' are 'strictly less than' the 'uint' C++ built-in values in the deque 'd0' (with respect to the 'Mangrove_DataComparatorWithHashing' template class)."<<endl; }
-	else { cout<<"\tThe 'uint' C++ built-in values in the deque 'd1' are not 'strictly less than' the 'uint' C++ built-in values in the deque 'd0' (with respect to the 'Mangrove_DataComparatorWithHashing' template class)."<<endl; }
+		{ cout<<"\tThe 'unsigned int (uint)' C++ built-in values in the deque 'd1' are 'strictly less than' the 'unsigned int (uint)' C++ built-in values in the deque 'd0' (with respect to the 'Mangrove_DataComparatorWithHashing' template class)."<<endl; }
+	else { cout<<"\tThe 'unsigned int (uint)' C++ built-in values in the deque 'd1' are not 'strictly less than' the 'unsigned int (uint)' C++ built-in values in the deque 'd0' (with respect to the 'Mangrove_DataComparatorWithHashing' template class)."<<endl; }
 	cout<<endl;
-	if(Mangrove_isPermutation(d0,d1)==true) cout<<"\tThe 'uint' C++ built-in values in the deque 'd0' are a permutation of the 'uint' C++ built-in values in the deque 'd1'."<<endl;
-	else cout<<"\tThe 'uint' C++ built-in values in the deque 'd0' are not a permutation of the 'uint' values in the deque 'd1'."<<endl;
+	if(Mangrove_isPermutation(d0,d1)==true) cout<<"\tThe 'unsigned int (uint)' C++ built-in values in the deque 'd0' are a permutation of the 'unsigned int (uint)' C++ built-in values in the deque 'd1'."<<endl;
+	else cout<<"\tThe 'unsigned int (uint)' C++ built-in values in the deque 'd0' are not a permutation of the 'unsigned int (uint)' values in the deque 'd1'."<<endl;
 	cout<<endl;
-	cout<<"\tIntersecting the 'uint' C++ built-in deques 'd0' and 'd1' ... ";
+	cout<<"\tIntersecting the 'unsigned int (uint)' C++ built-in deques 'd0' and 'd1' ... ";
 	Mangrove_intersection(d0,d1,d01);
 	cout<<"ok"<<endl;
-	cout<<"\tThe intersection between the deques of interest is given by the following 'uint' C++ built-in values: ";
+	cout<<"\tThe intersection between the deques of interest is given by the following 'unsigned int (uint)' C++ built-in values: ";
 	Mangrove_exportHybrid(d01);
 	cout<<endl;
 	

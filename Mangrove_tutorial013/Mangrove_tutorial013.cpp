@@ -61,7 +61,7 @@ int main(void)
 	cout<<"ok"<<endl;
 	cout<<"\tThe new deque 'd0' contains the following "<<d0.size()<<" 'boolean (bool)' C++ built-in values: ";
 	Mangrove_exportHybrid(d0);
-	cout<<"\tToggling (negating) the 'bool' values in the deque 'd0', and saving their updated versions on the new deque 'd1' ... ";
+	cout<<"\tToggling (negating) the 'boolean (bool)' values in the deque 'd0', and saving their updated versions on the new deque 'd1' ... ";
 	cout.flush();
 	Mangrove_toggle(d0,d1);
 	cout<<"ok"<<endl;
@@ -87,7 +87,7 @@ int main(void)
 	cout<<"ok"<<endl;
 	cout<<"\tThe new list 'l0' contains the following "<<l0.size()<<" 'boolean (bool)' C++ built-in values: ";
 	Mangrove_exportHybrid(l0);
-	cout<<"\tToggling (negating) the 'bool' values in the list 'l0', and saving their updated versions on the new list 'l1' ... ";
+	cout<<"\tToggling (negating) the 'boolean (bool)' values in the list 'l0', and saving their updated versions on the new list 'l1' ... ";
 	cout.flush();
 	Mangrove_toggle(l0,l1);
 	cout<<"ok"<<endl;
@@ -113,7 +113,7 @@ int main(void)
 	cout<<"ok"<<endl;
 	cout<<"\tThe new array 'v0' contains the following "<<v0.size()<<" 'boolean (bool)' C++ built-in values: ";
 	Mangrove_exportHybrid(v0);
-	cout<<"\tToggling (negating) the 'bool' values in the array 'v0', and saving their updated versions on the new array 'v1' ... ";
+	cout<<"\tToggling (negating) the 'boolean (bool)' values in the array 'v0', and saving their updated versions on the new array 'v1' ... ";
 	cout.flush();
 	Mangrove_toggle(v0,v1);
 	cout<<"ok"<<endl;

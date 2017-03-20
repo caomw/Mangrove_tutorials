@@ -40,32 +40,34 @@ using namespace mangrove_tds;
  */
 int main(void)
 {
-	deque< deque<uint> > d,d1;
-	deque< set<uint, Mangrove_DataComparatorWithHashing<uint> > > ds;
+	deque< deque<int> > d,d1;
+	deque< set<int, Mangrove_DataComparatorWithHashing<int> > > ds;
 	ofstream out;
 	ifstream in;
 
-	/* This is the 'Mangrove_tutorial020' tutorial, where the nested deques of several 'uint' C++ built-in values are validated. Here, the 'uint' C++ built-in values are sorted with respect to their hashing values (see the 'Mangrove_DataComparatorWithHashing'
-	 * template class). */
+	/* This is the 'Mangrove_tutorial020' tutorial, where the nested deques of several 'integer (int)' C++ built-in values are validated. Here, the 'integer (int)' C++ built-in values are sorted with respect to their hashing values (see the 
+	 * 'Mangrove_DataComparatorWithHashing' template class). */
 	Mangrove_exportCopyrightDisclaimer ("The 'Mangrove_tutorial020' Tutorial");
-	cout<<"\tIMPORTANT:\tthe 'uint' C++ built-in values in the sets of interest are sorted with respect to the order relation of their hashing values (see the 'Mangrove_DataComparatorWithHashing' template class)."<<endl<<endl;
+	cout<<"\tIMPORTANT:\tthe 'integer (int)' C++ built-in values in the sets of interest are sorted with respect to the order relation of their hashing values (see the 'Mangrove_DataComparatorWithHashing' template class)."<<endl<<endl;
 	cout.flush();
 	
-	/* TASK #1 - creating a new nested deque, containing several deques of 'uint' C++ built-in values. Then, converting this new deque to the corresponding nested deque of several sets. */
-	cout<<"\tCreating the nested deque 'd', containing several deques of 'uint' C++ built-in values, ... ";
-	d.push_back( deque<uint>() );
+	/* TASK #1 - creating a new nested deque, containing several deques of 'integer (int)' C++ built-in values. Then, converting this new deque to the corresponding nested deque of several sets. */
+	cout<<"\tCreating the nested deque 'd', containing several deques of 'integer (int)' C++ built-in values, ... ";
+	d.push_back( deque<int>() );
 	d.back().push_back(3);
-	d.push_back( deque<uint>() );
-	for(uint k=10;k>6;k--) d.back().push_back(2*k);
+	d.push_back( deque<int>() );
+	for(int k=10;k>6;k--) d.back().push_back(2*k);
+	d.back().push_back(-1);
+	d.back().push_back(-4);
 	cout<<"ok"<<endl;
 	Mangrove_debug(d);
-	cout<<"\tThe total number of the 'uint' C++ built-in values in the nested deque 'd' is "<<Mangrove_valuesNumber(d)<<"."<<endl<<endl;
+	cout<<"\tThe total number of the 'integer (int)' C++ built-in values in the nested deque 'd' is "<<Mangrove_valuesNumber(d)<<"."<<endl<<endl;
 	cout.flush();
-	cout<<"\tConverting the nested deque 'd' into the nested deque 'ds', containing several sets of 'uint' C++ built-in values, ... ";
+	cout<<"\tConverting the nested deque 'd' into the nested deque 'ds', containing several sets of 'integer (int)' C++ built-in values, ... ";
 	Mangrove_convert(d,ds);
 	cout<<"ok"<<endl;
 	Mangrove_debug(ds);
-	cout<<"\tThe total number of the 'uint' C++ built-in values in the new nested deque 'ds' is "<<Mangrove_valuesNumber(ds)<<"."<<endl<<endl;
+	cout<<"\tThe total number of the 'integer (int)' C++ built-in values in the new nested deque 'ds' is "<<Mangrove_valuesNumber(ds)<<"."<<endl<<endl;
 	cout<<"\tConverting the nested deque 'ds' back to the corresponding nesting deque, containing several deques, ... ";
 	Mangrove_convert(ds,d1);
 	cout<<"ok"<<endl;

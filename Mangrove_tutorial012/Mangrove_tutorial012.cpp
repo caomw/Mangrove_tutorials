@@ -43,12 +43,12 @@ int main(void)
 	ofstream out;
 	ifstream in;
 
-	/* This is the 'Mangrove_tutorial012' tutorial, where the arrays, containing several 'uint' C++ built-in values, are validated. */
+	/* This is the 'Mangrove_tutorial012' tutorial, where the arrays, containing several 'unsigned int (uint)' C++ built-in values, are validated. */
 	Mangrove_exportCopyrightDisclaimer ("The 'Mangrove_tutorial012' Tutorial");
 	cout.flush();
 	
-	/* TASK #1 - creating a new array 'v0' of several 'uint' C++ built-in values, and validating functions for exporting its 'debug', 'hybrid', and compact representations. */
-	cout<<"\tCreating the new array 'v0' of several 'uint' C++ built-in values ... ";
+	/* TASK #1 - creating a new array 'v0' of several 'unsigned int (uint)' C++ built-in values, and validating functions for exporting its 'debug', 'hybrid', and compact representations. */
+	cout<<"\tCreating the new array 'v0' of several 'unsigned int (uint)' C++ built-in values ... ";
 	vector<uint> v0={ 3,0,54,11, 0 },v1,v01;
 	cout<<"ok"<<endl;
 	Mangrove_debug(v0);
@@ -66,8 +66,8 @@ int main(void)
 	in.close();
 	cout<<"ok"<<endl;
 	Mangrove_debug(v1);
-	if(Mangrove_theSame(v0,v1)) cout<<"\tThe 'uint' C++ built-in values in the reconstructed array coincide position by position with the 'uint' C++ built-in values in the array 'v0'."<<endl<<endl;
-	else cout<<"\tThe 'uint' C++ built-in values in the reconstructed array do not coincide position by position with the 'uint' C++ built-in values in the array 'v0'."<<endl<<endl;
+	if(Mangrove_theSame(v0,v1)) cout<<"\tThe 'unsigned int (uint)' C++ built-in values in the reconstructed array coincide position by position with the 'unsigned int (uint)' C++ built-in values in the array 'v0'."<<endl<<endl;
+	else cout<<"\tThe 'unsigned int (uint)' C++ built-in values in the reconstructed array do not coincide position by position with the 'unsigned int (uint)' C++ built-in values in the array 'v0'."<<endl<<endl;
 	cout<<"\tRemoving the 'hybrid_array.txt' file ... ";
 	Mangrove_removeFile("hybrid_array.txt");
 	cout<<"ok"<<endl<<endl;
@@ -84,8 +84,8 @@ int main(void)
 	in.close();
 	cout<<"ok"<<endl;
 	Mangrove_debug(v1);
-	if(Mangrove_theSame(v0,v1)) cout<<"\tThe 'uint' C++ built-in values in the reconstructed array coincide position by position with the 'uint' C++ built-in values in the array 'v0'."<<endl<<endl;
-	else cout<<"\tThe 'uint' C++ built-in values in the reconstructed array do not coincide position by position with the 'uint' C++ built-in values in the array 'v0'."<<endl<<endl;
+	if(Mangrove_theSame(v0,v1)) cout<<"\tThe 'unsigned int (uint)' C++ built-in values in the reconstructed array coincide position by position with the 'unsigned int (uint)' C++ built-in values in the array 'v0'."<<endl<<endl;
+	else cout<<"\tThe 'unsigned int (uint)' C++ built-in values in the reconstructed array do not coincide position by position with the 'unsigned int (uint)' C++ built-in values in the array 'v0'."<<endl<<endl;
 	cout<<"\tRemoving the 'compact_array.txt' file ... ";
 	Mangrove_removeFile("compact_array.txt");
 	cout<<"ok"<<endl<<endl;
@@ -93,12 +93,12 @@ int main(void)
 	v1.clear();
 	Mangrove_pause();
 	
-	/* TASK #2 - validating the 'Mangrove_getPosition()' and the  'Mangrove_findProjection()' template functions for the arrays of several template values (specialized for the 'uint' C++ built-in values, in this case). */
+	/* TASK #2 - validating the 'Mangrove_getPosition()' and the  'Mangrove_findProjection()' template functions for the arrays of several template values (specialized for the 'unsigned int (uint)' C++ built-in values, in this case). */
 	uint p;
-	if(Mangrove_getPosition(v0,(uint)54,p)==true) { cout<<"\tThe array 'v0' contains the 'uint' C++ built-in value '54' in position "<<p<<"."<<endl; }
-	else { cout<<"\tThe array 'v0' does not contain the 'uint' C++ built-in value '54'."<<endl; }
-	if(Mangrove_getPosition(v0,(uint)58,p)==true) { cout<<"\tThe array 'v0' contains the 'uint' C++ built-in value '58' in position "<<p<<"."<<endl<<endl; }
-	else { cout<<"\tThe array 'v0' does not contain the 'uint' C++ built-in value '58'."<<endl<<endl; }
+	if(Mangrove_getPosition(v0,(uint)54,p)==true) { cout<<"\tThe array 'v0' contains the 'unsigned int (uint)' C++ built-in value '54' in position "<<p<<"."<<endl; }
+	else { cout<<"\tThe array 'v0' does not contain the 'unsigned int (uint)' C++ built-in value '54'."<<endl; }
+	if(Mangrove_getPosition(v0,(uint)58,p)==true) { cout<<"\tThe array 'v0' contains the 'unsigned int (uint)' C++ built-in value '58' in position "<<p<<"."<<endl<<endl; }
+	else { cout<<"\tThe array 'v0' does not contain the 'unsigned int (uint)' C++ built-in value '58'."<<endl<<endl; }
 	cout.flush();
 	cout<<"\tRetrieving the canonical projection of the array 'v0' with respect to the position 0 ... ";
 	Mangrove_findProjection(0,v0,v1);
@@ -106,19 +106,19 @@ int main(void)
 	cout<<"\tThe resulting canonical projection of interest is: ";
 	Mangrove_exportHybrid(v1);
 	cout.flush();
-	if(Mangrove_includes(v0,v1)==true) cout<<"\tThe array 'v0' contains all 'uint' C++ built-in values in the canonical projection of interest in the same order as they appear (but not forming necessarily a block of consecutive values)."<<endl<<endl;
-	else cout<<"\tThe array 'v0' does not contain all 'uint' C++ built-in values in the canonical projection of interest in the same order as they appear (but not forming necessarily a block of consecutive values)."<<endl<<endl;
+	if(Mangrove_includes(v0,v1)==true) cout<<"\tThe array 'v0' contains all 'unsigned int (uint)' C++ built-in values in the canonical projection of interest in the same order as they appear (but not forming necessarily a block of consecutive values)."<<endl<<endl;
+	else cout<<"\tThe array 'v0' does not contain all 'unsigned int (uint)' C++ built-in values in the canonical projection of interest in the same order as they appear (but not forming necessarily a block of consecutive values)."<<endl<<endl;
 	cout<<"\tRetrieving the canonical projection of the array 'v0' with respect to the position 4 ... ";
 	Mangrove_findProjection(4,v0,v1);
 	cout<<"ok"<<endl;
 	cout<<"\tThe resulting canonical projection of interest is: ";
 	Mangrove_exportHybrid(v1);
-	if(Mangrove_includes(v0,v1)==true) cout<<"\tThe array 'v0' contains all 'uint' C++ built-in values in the canonical projection of interest in the same order as they appear (but not forming necessarily a block of consecutive values)."<<endl<<endl;
-	else cout<<"\tThe array 'v0' does not contain all 'uint' C++ built-in values in the canonical projection of interest in the same order as they appear (but not forming necessarily a block of consecutive values)."<<endl<<endl;
-	cout<<"\tIMPORTANT:\t\tthe operations (just performed) are executed without sorting the values of interest, and may produce wrong results."<<endl<<endl<<"\tSorting the 'uint' C++ built-in values in the array 'v0' ... ";
+	if(Mangrove_includes(v0,v1)==true) cout<<"\tThe array 'v0' contains all 'unsigned int (uint)' C++ built-in values in the canonical projection of interest in the same order as they appear (but not forming necessarily a block of consecutive values)."<<endl<<endl;
+	else cout<<"\tThe array 'v0' does not contain all 'unsigned int (uint)' C++ built-in values in the canonical projection of interest in the same order as they appear (but not forming necessarily a block of consecutive values)."<<endl<<endl;
+	cout<<"\tIMPORTANT:\t\tthe operations (just performed) are executed without sorting the values of interest, and may produce wrong results."<<endl<<endl<<"\tSorting the 'unsigned int (uint)' C++ built-in values in the array 'v0' ... ";
 	sort(v0.begin(),v0.end());
 	cout<<"ok"<<endl;
-	cout<<"\tThe new array 'v0' contains the following 'uint' C++ built-in values: ";
+	cout<<"\tThe new array 'v0' contains the following 'unsigned int (uint)' C++ built-in values: ";
 	Mangrove_exportHybrid(v0);
 	cout<<"\tRetrieving the canonical projection of the array 'v0' with respect to the position 0 ... ";
 	Mangrove_findProjection(0,v0,v1);
@@ -126,50 +126,52 @@ int main(void)
 	cout<<"\tThe resulting canonical projection of interest is: ";
 	Mangrove_exportHybrid(v1);
 	cout.flush();
-	if(Mangrove_includes(v0,v1)==true) cout<<"\tThe array 'v0' contains all 'uint' C++ built-in values in the canonical projection of interest in the same order as they appear (but not forming necessarily a block of consecutive values)."<<endl<<endl;
-	else cout<<"\tThe array 'v0' does not contain all 'uint' C++ built-in values in the canonical projection of interest in the same order as they appear (but not forming necessarily a block of consecutive values)."<<endl<<endl;
+	if(Mangrove_includes(v0,v1)==true) cout<<"\tThe array 'v0' contains all 'unsigned int (uint)' C++ built-in values in the canonical projection of interest in the same order as they appear (but not forming necessarily a block of consecutive values)."<<endl<<endl;
+	else cout<<"\tThe array 'v0' does not contain all 'unsigned int (uint)' C++ built-in values in the canonical projection of interest in the same order as they appear (but not forming necessarily a block of consecutive values)."<<endl<<endl;
 	cout<<"\tRetrieving the canonical projection of the array 'v0' with respect to the position 4 ... ";
 	Mangrove_findProjection(4,v0,v1);
 	cout<<"ok"<<endl;
 	cout<<"\tThe resulting canonical projection of interest is: ";
 	Mangrove_exportHybrid(v1);
-	if(Mangrove_includes(v0,v1)==true) cout<<"\tThe array 'v0' contains all 'uint' C++ built-in values in the canonical projection of interest in the same order as they appear (but not forming necessarily a block of consecutive values)."<<endl<<endl;
-	else cout<<"\tThe array 'v0' does not contain all 'uint' C++ built-in values in the canonical projection of interest in the same order as they appear (but not forming necessarily a block of consecutive values)."<<endl<<endl;
+	if(Mangrove_includes(v0,v1)==true) cout<<"\tThe array 'v0' contains all 'unsigned int (uint)' C++ built-in values in the canonical projection of interest in the same order as they appear (but not forming necessarily a block of consecutive values)."<<endl<<endl;
+	else cout<<"\tThe array 'v0' does not contain all 'unsigned int (uint)' C++ built-in values in the canonical projection of interest in the same order as they appear (but not forming necessarily a block of consecutive values)."<<endl<<endl;
 	cout.flush();
 	v1.clear();
 	Mangrove_pause();
 	
 	/* TASK #3 - creating a new array 'v1' to be compared with the existing array 'v0'. */
-	cout<<"\tThe array 'v0' contains the following 'uint' C++ built-in values: ";
+	cout<<"\tThe array 'v0' contains the following 'unsigned int (uint)' C++ built-in values: ";
 	Mangrove_exportHybrid(v0);
-	cout<<"\tCreating the new array 'v1' of several 'uint' C++ built-in values ... ";
+	cout<<"\tCreating the new array 'v1' of several 'unsigned int (uint)' C++ built-in values ... ";
 	v1={1,5,4,11,54};
 	cout<<"ok"<<endl;
 	Mangrove_debug(v1);
-	if(v0<v1) { cout<<"\tThe 'uint' C++ built-in values in the array 'v0' are 'strictly less than' the 'uint' C++ built-in values in the array 'v1' (with respect to the '<' operator)."<<endl; }
-	else { cout<<"\tThe 'uint' C++ built-in values in the array 'v0' are not 'strictly less than' the 'uint' C++ built-in values in the array 'v1' (with respect to the '<' operator)."<<endl; }
-	if( Mangrove_DataComparator<uint>()(v0,v1) ) { cout<<"\tThe 'uint' C++ built-in values in the array 'v0' are 'strictly less than' the 'uint' C++ built-in values in the array 'v1' (with respect to the 'Mangrove_DataComparator' template class)."<<endl; }
-	else { cout<<"\tThe 'uint' C++ built-in values in the array 'v0' are not 'strictly less than' the 'uint' C++ built-in values in the array 'v1' (with respect to the 'Mangrove_DataComparator' template class)."<<endl; }
-	if(v1<v0) { cout<<"\tThe 'uint' C++ built-in values in the array 'v1' are 'strictly less than' the 'uint' C++ built-in values in the array 'v0' (with respect to the '<' operator)."<<endl; }
-	else { cout<<"\tThe 'uint' C++ built-in values in the array 'v1' are not 'strictly less than' the 'uint' C++ built-in values in the array 'v0' (with respect to the '<' operator)."<<endl; }
-	if( Mangrove_DataComparator<uint>()(v1,v0) ) { cout<<"\tThe 'uint' C++ built-in values in the array 'v1' are 'strictly less than' the 'uint' C++ built-in values in the array 'v0' (with respect to the 'Mangrove_DataComparator' template class)."<<endl; }
-	else { cout<<"\tThe 'uint' C++ built-in values in the array 'v1' are not 'strictly less than' the 'uint' C++ built-in values in the array 'v0' (with respect to the 'Mangrove_DataComparator' template class)."<<endl; }
+	if(v0<v1) { cout<<"\tThe 'unsigned int (uint)' C++ built-in values in the array 'v0' are 'strictly less than' the 'unsigned int (uint)' C++ built-in values in the array 'v1' (with respect to the '<' operator)."<<endl; }
+	else { cout<<"\tThe 'unsigned int (uint)' C++ built-in values in the array 'v0' are not 'strictly less than' the 'unsigned int (uint)' C++ built-in values in the array 'v1' (with respect to the '<' operator)."<<endl; }
+	if( Mangrove_DataComparator<uint>()(v0,v1) ) 
+		{ cout<<"\tThe 'unsigned int (uint)' C++ built-in values in the array 'v0' are 'strictly less than' the 'unsigned int (uint)' C++ built-in values in the array 'v1' (with respect to the 'Mangrove_DataComparator' template class)."<<endl; }
+	else { cout<<"\tThe 'unsigned int (uint)' C++ built-in values in the array 'v0' are not 'strictly less than' the 'unsigned int (uint)' C++ built-in values in the array 'v1' (with respect to the 'Mangrove_DataComparator' template class)."<<endl; }
+	if(v1<v0) { cout<<"\tThe 'unsigned int (uint)' C++ built-in values in the array 'v1' are 'strictly less than' the 'unsigned int (uint)' C++ built-in values in the array 'v0' (with respect to the '<' operator)."<<endl; }
+	else { cout<<"\tThe 'unsigned int (uint)' C++ built-in values in the array 'v1' are not 'strictly less than' the 'unsigned int (uint)' C++ built-in values in the array 'v0' (with respect to the '<' operator)."<<endl; }
+	if( Mangrove_DataComparator<uint>()(v1,v0) ) 
+		{ cout<<"\tThe 'unsigned int (uint)' C++ built-in values in the array 'v1' are 'strictly less than' the 'unsigned int (uint)' C++ built-in values in the array 'v0' (with respect to the 'Mangrove_DataComparator' template class)."<<endl; }
+	else { cout<<"\tThe 'unsigned int (uint)' C++ built-in values in the array 'v1' are not 'strictly less than' the 'unsigned int (uint)' C++ built-in values in the array 'v0' (with respect to the 'Mangrove_DataComparator' template class)."<<endl; }
 	cout<<endl<<"\tThe hashing value of the array 'v0' (see the 'boost::hash_value()' template function) is "<<boost::hash_value(v0)<<"."<<endl;
 	cout<<"\tThe hashing value of the array 'v1' (see the 'boost::hash_value()' template function) is "<<boost::hash_value(v1)<<"."<<endl;
 	if( Mangrove_DataComparatorWithHashing<uint>()(v0,v1) ) 
-		{ cout<<"\tThe 'uint' C++ built-in values in the array 'v0' are 'strictly less than' the 'uint' C++ built-in values in the array 'v1' (with respect to the 'Mangrove_DataComparatorWithHashing' template class)."<<endl; }
-	else { cout<<"\tThe 'uint' C++ built-in values in the array 'v0' are not 'strictly less than' the 'uint' C++ built-in values in the array 'v1' (with respect to the 'Mangrove_DataComparatorWithHashing' template class)."<<endl; }
+		{ cout<<"\tThe 'unsigned int (uint)' C++ built-in values in the array 'v0' are 'strictly less than' the 'unsigned int (uint)' C++ built-in values in the array 'v1' (with respect to the 'Mangrove_DataComparatorWithHashing' template class)."<<endl; }
+	else { cout<<"\tThe 'unsigned int (uint)' C++ built-in values in the array 'v0' are not 'strictly less than' the 'unsigned int (uint)' C++ built-in values in the array 'v1' (with respect to the 'Mangrove_DataComparatorWithHashing' template class)."<<endl; }
 	if( Mangrove_DataComparatorWithHashing<uint>()(v1,v0) ) 
-		{ cout<<"\tThe 'uint' C++ built-in values in the array 'v1' are 'strictly less than' the 'uint' C++ built-in values in the array 'v0' (with respect to the 'Mangrove_DataComparatorWithHashing' template class)."<<endl; }
-	else { cout<<"\tThe 'uint' C++ built-in values in the array 'v1' are not 'strictly less than' the 'uint' C++ built-in values in the array 'v0' (with respect to the 'Mangrove_DataComparatorWithHashing' template class)."<<endl; }
+		{ cout<<"\tThe 'unsigned int (uint)' C++ built-in values in the array 'v1' are 'strictly less than' the 'unsigned int (uint)' C++ built-in values in the array 'v0' (with respect to the 'Mangrove_DataComparatorWithHashing' template class)."<<endl; }
+	else { cout<<"\tThe 'unsigned int (uint)' C++ built-in values in the array 'v1' are not 'strictly less than' the 'unsigned int (uint)' C++ built-in values in the array 'v0' (with respect to the 'Mangrove_DataComparatorWithHashing' template class)."<<endl; }
 	cout<<endl;
-	if(Mangrove_isPermutation(v0,v1)==true) cout<<"\tThe 'uint' C++ built-in values in the array 'v0' are a permutation of the 'uint' C++ built-in values in the array 'v1'."<<endl;
-	else cout<<"\tThe 'uint' C++ built-in values in the array 'v0' are not a permutation of the 'uint' values in the array 'v1'."<<endl;
+	if(Mangrove_isPermutation(v0,v1)==true) cout<<"\tThe 'unsigned int (uint)' C++ built-in values in the array 'v0' are a permutation of the 'unsigned int (uint)' C++ built-in values in the array 'v1'."<<endl;
+	else cout<<"\tThe 'unsigned int (uint)' C++ built-in values in the array 'v0' are not a permutation of the 'unsigned int (uint)' values in the array 'v1'."<<endl;
 	cout<<endl;
-	cout<<"\tIntersecting the 'uint' C++ built-in arrays 'v0' and 'v1' ... ";
+	cout<<"\tIntersecting the 'unsigned int (uint)' C++ built-in arrays 'v0' and 'v1' ... ";
 	Mangrove_intersection(v0,v1,v01);
 	cout<<"ok"<<endl;
-	cout<<"\tThe intersection between the arrays of interest is given by the following 'uint' C++ built-in values: ";
+	cout<<"\tThe intersection between the arrays of interest is given by the following 'unsigned int (uint)' C++ built-in values: ";
 	Mangrove_exportHybrid(v01);
 	cout<<endl;
 	

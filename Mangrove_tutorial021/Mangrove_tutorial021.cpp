@@ -40,31 +40,33 @@ using namespace mangrove_tds;
  */
 int main(void)
 {
-	list< list<uint> > l,l1;
-	list< set<uint, Mangrove_DataComparatorWithHashing<uint> > > ls;
+	list< list<int> > l,l1;
+	list< set<int, Mangrove_DataComparatorWithHashing<int> > > ls;
 	ofstream out;
 	ifstream in;
 
-	/* This is the 'Mangrove_tutorial021' tutorial, where the nested lists of several 'uint' C++ built-in values are validated. Here, the 'uint' C++ built-in values are sorted with respect to their hashing values (see the 'Mangrove_DataComparatorWithHashing'
-	 * template class). */
+	/* This is the 'Mangrove_tutorial021' tutorial, where the nested lists of several 'integer (int)' C++ built-in values are validated. Here, the 'integer (int)' C++ built-in values are sorted with respect to their hashing values (see the 
+	 * 'Mangrove_DataComparatorWithHashing 'template class). */
 	Mangrove_exportCopyrightDisclaimer ("The 'Mangrove_tutorial021' Tutorial");
-	cout<<"\tIMPORTANT:\tthe 'uint' C++ built-in values in the sets of interest are sorted with respect to the order relation of their hashing values (see the 'Mangrove_DataComparatorWithHashing' template class)."<<endl<<endl;
+	cout<<"\tIMPORTANT:\tthe 'integer (int)' C++ built-in values in the sets of interest are sorted with respect to the order relation of their hashing values (see the 'Mangrove_DataComparatorWithHashing' template class)."<<endl<<endl;
 	cout.flush();
 	
-	/* TASK #1 - creating a new nested list, containing several lists of 'uint' C++ built-in values. Then, converting this new list to the corresponding nested list of several sets. */
-	cout<<"\tCreating the nested list 'l', containing several lists of 'uint' C++ built-in values, ... ";
-	l.push_back( list<uint>() );
-	l.push_back( list<uint>() );
-	for(uint k=10;k>6;k--) l.back().push_back(5*k);
+	/* TASK #1 - creating a new nested list, containing several lists of 'integer (int)' C++ built-in values. Then, converting this new list to the corresponding nested list of several sets. */
+	cout<<"\tCreating the nested list 'l', containing several lists of 'integer (int)' C++ built-in values, ... ";
+	l.push_back( list<int>() );
+	l.push_back( list<int>() );
+	for(int k=10;k>6;k--) l.back().push_back(5*k);
+	l.back().push_back(2);
+	l.back().push_back(-100);
 	cout<<"ok"<<endl;
 	Mangrove_debug(l);
-	cout<<"\tThe total number of the 'uint' C++ built-in values in the nested list 'l' is "<<Mangrove_valuesNumber(l)<<"."<<endl<<endl;
+	cout<<"\tThe total number of the 'integer (int)' C++ built-in values in the nested list 'l' is "<<Mangrove_valuesNumber(l)<<"."<<endl<<endl;
 	cout.flush();
-	cout<<"\tConverting the nested list 'l' into the nested list 'ls', containing several sets of 'uint' C++ built-in values, ... ";
+	cout<<"\tConverting the nested list 'l' into the nested list 'ls', containing several sets of 'integer (int)' C++ built-in values, ... ";
 	Mangrove_convert(l,ls);
 	cout<<"ok"<<endl;
 	Mangrove_debug(ls);
-	cout<<"\tThe total number of the 'uint' C++ built-in values in the new nested list 'ls' is "<<Mangrove_valuesNumber(ls)<<"."<<endl<<endl;
+	cout<<"\tThe total number of the 'integer (int)' C++ built-in values in the new nested list 'ls' is "<<Mangrove_valuesNumber(ls)<<"."<<endl<<endl;
 	cout<<"\tConverting the nested list 'ls' back to the corresponding nesting list, containing several lists, ... ";
 	Mangrove_convert(ls,l1);
 	cout<<"ok"<<endl;

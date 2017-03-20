@@ -46,12 +46,12 @@ int main(void)
 	ofstream out;
 	ifstream in;
 
-	/* This is the 'Mangrove_tutorial014' tutorial, where the pairs, involving a boolean flag and arrays/deques/lists of several template values (here, specialized for the 'uint' C++ built-in values), are validated. */
+	/* This is the 'Mangrove_tutorial014' tutorial, where the pairs, involving a boolean flag and arrays/deques/lists of several template values (here, specialized for the 'unsigned int (uint)' C++ built-in values), are validated. */
 	Mangrove_exportCopyrightDisclaimer ("The 'Mangrove_tutorial014' Tutorial");
 	cout.flush();
 	
-	/* TASK #1 - validating the pairs, involving a boolean flag and a deque of 'uint' C++ built-in values. */
-	cout<<"\tConstructing a new pair 'p=(b,d)', involving a boolean flag 'b' and a deque 'd' of several 'uint' C++ built-in values ... ";
+	/* TASK #1 - validating the pairs, involving a boolean flag and a deque of 'unsigned int (uint)' C++ built-in values. */
+	cout<<"\tConstructing a new pair 'p=(b,d)', involving a boolean flag 'b' and a deque 'd' of several 'unsigned int (uint)' C++ built-in values ... ";
 	pd0.first=true;
 	pd0.second=deque<uint>();
 	for(uint k=0;k<5;k++) pd0.second.push_back(k);
@@ -80,8 +80,8 @@ int main(void)
 	pd0.second.clear();
 	Mangrove_pause();
 	
-	/* TASK #2 - validating the pairs, involving a boolean flag and a list of 'uint' C++ built-in values. */
-	cout<<"\tConstructing a new pair 'p=(b,l)', involving a boolean flag 'b' and a list 'l' of several 'uint' C++ built-in values ... ";
+	/* TASK #2 - validating the pairs, involving a boolean flag and a list of 'unsigned int (uint)' C++ built-in values. */
+	cout<<"\tConstructing a new pair 'p=(b,l)', involving a boolean flag 'b' and a list 'l' of several 'unsigned int (uint)' C++ built-in values ... ";
 	pl0.first=false;
 	pl0.second=list<uint>();
 	for(uint k=0;k<5;k++) pl0.second.push_back(3*k);
@@ -110,8 +110,8 @@ int main(void)
 	pl0.second.clear();
 	Mangrove_pause();
 
-	/* TASK #3 - validating the pairs, involving a boolean flag and an array of 'uint' C++ built-in values. */
-	cout<<"\tConstructing a new pair 'p=(b,a)', involving a boolean flag 'b' and an array 'a' of several 'uint' C++ built-in values ... ";
+	/* TASK #3 - validating the pairs, involving a boolean flag and an array of 'unsigned int (uint)' C++ built-in values. */
+	cout<<"\tConstructing a new pair 'p=(b,a)', involving a boolean flag 'b' and an array 'a' of several 'unsigned int (uint)' C++ built-in values ... ";
 	pa0.first=false;
 	pa0.second=vector<uint>();
 	pa0.second.push_back(8);
