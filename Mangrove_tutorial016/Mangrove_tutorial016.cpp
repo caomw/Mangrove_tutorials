@@ -53,7 +53,7 @@ int main(void)
 	
 	/* TASK #1 - creating a new set of several 'integer (int)' C++ built-in values. */
 	cout<<"\tCreating the new set 's0' of several 'integer (int)' C++ built-in values ... ";
-	set<int, Mangrove_DataComparatorWithHashing<int> > s0={3,0,46,55,11,5};
+	set<int, Mangrove_DataComparatorWithHashing<int> > s0={3,0,46,55,11,-5,0,-4};
 	cout<<"ok"<<endl;
 	Mangrove_debug(s0);
 	cout<<"\tThe 'hybrid' representation of the set 's0' is the following: ";
@@ -65,7 +65,7 @@ int main(void)
 	out.close();
 	cout<<"\tReconstructing the content of the set 's0' by reading and parsing its 'hybrid' representation from the 'hybrid_set.txt' file ... ";
 	in.open("hybrid_set.txt");
-	s01={0,1,2,3,4,5};
+	s01={0,1,2,3,4,5,6,7};
 	Mangrove_reconstructFromHybrid(s01,in);
 	cout<<"ok"<<endl;
 	in.close();
@@ -93,6 +93,7 @@ int main(void)
 	cout<<"\tRemoving the 'compact_set.txt' file ... ";
 	Mangrove_removeFile("compact_set.txt");
 	cout<<"ok"<<endl<<endl;
+	Mangrove_pause();
 	
 	/* TASK #2 - validating the 'Mangrove_contains()' and the 'Mangrove_select()' template functions, as well as the 'Mangrove_intersection()' template function. */
 	if(Mangrove_contains(s0,5)==true) cout<<"\tThe set 's0' contains the 'integer (int)' C++ built-in value 5 (see the 'Mangrove_contains()' template function)."<<endl;
@@ -105,7 +106,7 @@ int main(void)
 	cout<<p<<" in position 4."<<endl<<endl;
 	cout.flush();
 	cout<<"\tCreating the new set 's1' of several 'int' C++ built-in values ... ";
-	set<int, Mangrove_DataComparatorWithHashing<int> > s1={ 5,0,54,11, 22 };
+	set<int, Mangrove_DataComparatorWithHashing<int> > s1={54,3,55,0,-4,2,-5};
 	cout<<"ok"<<endl;
 	Mangrove_debug(s1);
 	cout<<"\tRetrieving the 'int' C++ built-in values in the common intersection between the existing set 's0' and the new set 's1' ... ";
@@ -126,7 +127,7 @@ int main(void)
 	cout.flush();
 	cout<<endl<<"\tUpdating the 'int' C++ built-in values in the deque 'd' ... ";
 	d.clear();
-	d={ 5,0,54,11, 22, 1, -3 };
+	d={-5,-2,54,-4,13,11};
 	cout<<"ok"<<endl;
 	cout<<"\tThe new deque 'd' contains the following 'int' C++ built-in values: ";
 	Mangrove_exportHybrid(d);
@@ -160,7 +161,7 @@ int main(void)
 	cout.flush();
 	cout<<endl<<"\tUpdating the 'int' C++ built-in values in the list 'l' ... ";
 	l.clear();
-	l={ 5,0,44,-11, 22, 1, 43 };
+	l=list<int>(s0.crbegin(),s0.crend());
 	cout<<"ok"<<endl;
 	cout<<"\tThe new list 'l' contains the following 'int' C++ built-in values: ";
 	Mangrove_exportHybrid(l);
@@ -194,7 +195,7 @@ int main(void)
 	cout.flush();
 	cout<<endl<<"\tUpdating the 'int' C++ built-in values in the array 'v' ... ";
 	v.clear();
-	v={ 6,7,8,-23,-6 };
+	v={57,-8,-11,-12,-5};
 	cout<<"ok"<<endl;
 	cout<<"\tThe new array 'v' contains the following 'int' C++ built-in values: ";
 	Mangrove_exportHybrid(v);
